@@ -1,0 +1,10 @@
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/bin/Debug/netcoreapp2.1/Task4HomeWork.deps.json
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/bin/Debug/netcoreapp2.1/Task4HomeWork.runtimeconfig.json
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/bin/Debug/netcoreapp2.1/Task4HomeWork.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/bin/Debug/netcoreapp2.1/Task4HomeWork.dll
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/bin/Debug/netcoreapp2.1/Task4HomeWork.pdb
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/obj/Debug/netcoreapp2.1/Task4HomeWork.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/obj/Debug/netcoreapp2.1/Task4HomeWork.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/obj/Debug/netcoreapp2.1/Task4HomeWork.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/obj/Debug/netcoreapp2.1/Task4HomeWork.dll
+/Users/Christian/Desktop/HSE/1module/sem2/HomeWork/homework2/Task4HomeWork/obj/Debug/netcoreapp2.1/Task4HomeWork.pdb
