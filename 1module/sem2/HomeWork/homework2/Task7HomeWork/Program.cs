@@ -38,7 +38,7 @@ class Program
             int intPart;
             FractionalAndIntParts(number, out fract, out intPart);
             SquareRootAndSquare(number, out root, out sqaure);
-            string report = root == -1.0 ? "Square Root Doesnt Exist" : root.ToString("F3");
+            string report = Math.Abs(root  + 1.0) < 1e-9 ? "Square Root Doesnt Exist" : root.ToString("F3");
 
             Console.WriteLine("Fract part: {0:F3}, Int Part: {1}, SqRoot: {2:F3}, Square {3:F3}", fract, intPart, report , sqaure);
             Console.WriteLine("To exit press Esc");
