@@ -21,7 +21,7 @@ class Program
         {
             Console.WriteLine("Enter three coefficients");
             int a, b, c;
-            while (!(int.TryParse(Console.ReadLine(), out a)) && a != 0)
+            while (!(int.TryParse(Console.ReadLine(), out a) && a != 0))
             {
                 Console.WriteLine("Something wrong with input, Reenter A pls");
             }
@@ -37,14 +37,10 @@ class Program
             }
             Complex root1, root2;
             AnalizeEquation(a, b, c, out root1, out root2);
-            if (root1.Equals(root2))
-            {
-                Console.WriteLine("One root: " + root1);
-            }
-            else
-            {
-                Console.WriteLine("Two roots: {0}, {1}", root1, root2);
-            }
+
+            string output = (root1.Equals(root2) ? "One root: " + root1 : "Two roots: " + root1 + ", " + root2);
+            Console.WriteLine(output);
+            
             Console.WriteLine("To exit press Esc");
             keyInfo = Console.ReadKey();
         } while (keyInfo.Key != ConsoleKey.Escape);
