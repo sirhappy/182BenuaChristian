@@ -1,7 +1,7 @@
 ﻿using System;
 /*БПИ182
  * Кристиан Бенуа
- * Ввести натуральное трехзначное число Р. Найти наибольшее целое число, которое можно получить, переставляя цифры числа Р.
+ * Ввести натуральное трехзначное число Р. Найти наибольшее целое число, которое можно получить, переставляя цифры числа Р.
  */
 
 
@@ -38,7 +38,7 @@ class Program
         {
             Console.WriteLine("Enter the number: ");
             int p;
-            while (!(int.TryParse(Console.ReadLine(), out p)) && p >= 100 && p < 1000)
+            while (!(int.TryParse(Console.ReadLine(), out p) && p >= 100 && p < 1000))
             {
                 Console.WriteLine("Something wrong wuth input, reenter pls");
             }
