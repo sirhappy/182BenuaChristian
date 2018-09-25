@@ -22,7 +22,7 @@ class Program
         {
             int number;
             Console.WriteLine("Enter the number");
-            while (!int.TryParse(Console.ReadLine(), out number) && number > 999 && number < 10000)
+            while (!(int.TryParse(Console.ReadLine(), out number) && number > 999 && number < 10000))
             {
                 Console.WriteLine("Comething wrong with your input, Reenter value");
             }
