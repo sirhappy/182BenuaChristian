@@ -27,19 +27,19 @@ class Program
         {
             double a, b, c;
             Console.WriteLine("Enter three Lengths of edges in Triangle");
-            while (!(double.TryParse(Console.ReadLine(), out a)))
+            while (!(double.TryParse(Console.ReadLine(), out a) && a > 0))
             {
                 Console.WriteLine("Something wrong with input, Reenter first edge Length pls");
 
             }
 
-            while (!(double.TryParse(Console.ReadLine(), out b)))
+            while (!(double.TryParse(Console.ReadLine(), out b) && b > 0))
             {
                 Console.WriteLine("Something wrong with input, Reenter second edge Length pls");
 
             }
 
-            while (!(double.TryParse(Console.ReadLine(), out c)))
+            while (!(double.TryParse(Console.ReadLine(), out c) && c > 0))
             {
                 Console.WriteLine("Something wrong with input, Reenter third edge Length pls");
             }
