@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{1BA45C24-8AC6-4C4F-B3CA-1F8247858C4B}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task4/Program.cs">
+    <Files>
+      <File FileName="Task1/Program.cs" Line="20" Column="10" />
+      <File FileName="Task2/Program.cs" Line="35" Column="97" />
+      <File FileName="Task3/Program.cs" Line="53" Column="52" />
+      <File FileName="Task4/Program.cs" Line="22" Column="66" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Task2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Task1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Task4 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Task3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

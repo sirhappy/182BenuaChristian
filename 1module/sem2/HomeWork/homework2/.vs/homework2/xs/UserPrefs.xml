@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{F8D9FACB-466B-464F-B3A0-1D2D47A84747}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="homework2 Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task5HomeWork/Program.cs">
     <Files>
       <File FileName="Task4HomeWork/Program.cs" Line="4" Column="103" />
       <File FileName="Task1HomeWork/Program.cs" Line="26" Column="62" />
@@ -9,9 +9,8 @@
       <File FileName="Task7/Program.cs" Line="47" Column="1" />
       <File FileName="Task5HomeWork/Program.cs" Line="4" Column="123" />
       <File FileName="Task6HomeWork/Program.cs" Line="28" Column="68" />
-      <File FileName="Task7HomeWork/Program.cs" Line="43" Column="121" />
+      <File FileName="Task7HomeWork/Program.cs" Line="39" Column="48" />
       <File FileName="Task3HomeWork/Program.cs" Line="1" Column="1" />
-      <File FileName="homework2 Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

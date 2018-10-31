@@ -1,0 +1,10 @@
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/bin/Debug/netcoreapp2.1/Task_9_1.deps.json
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/bin/Debug/netcoreapp2.1/Task_9_1.runtimeconfig.json
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/bin/Debug/netcoreapp2.1/Task_9_1.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/bin/Debug/netcoreapp2.1/Task_9_1.dll
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/bin/Debug/netcoreapp2.1/Task_9_1.pdb
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/obj/Debug/netcoreapp2.1/Task_9_1.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/obj/Debug/netcoreapp2.1/Task_9_1.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/obj/Debug/netcoreapp2.1/Task_9_1.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/obj/Debug/netcoreapp2.1/Task_9_1.dll
+/Users/Christian/Desktop/HSE/1module/sem5/homework/homework/Task_9_1/obj/Debug/netcoreapp2.1/Task_9_1.pdb

@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{FF31B3E5-57E1-4EEA-8C61-FA9E8134BD27}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.ItemProperties.Task6HW PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Task3HW PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task4Sem/Program.cs">
+    <Files>
+      <File FileName="Task4Sem/Program.cs" Line="1" Column="1" />
+      <File FileName="Task3HW/Program.cs" Line="1" Column="1" />
+      <File FileName="Task4HW/Program.cs" Line="1" Column="1" />
+      <File FileName="homework3 Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Task7Sem PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Task6Sem PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4HW/Program.cs" relfile="Task4HW/Program.cs" line="16" column="1" />
+      <Breakpoint file="/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4HW/Program.cs" relfile="Task4HW/Program.cs" line="18" column="1" />
+      <Breakpoint file="/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4HW/Program.cs" relfile="Task4HW/Program.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Task5HW PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Task2HW PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Task4Sem PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

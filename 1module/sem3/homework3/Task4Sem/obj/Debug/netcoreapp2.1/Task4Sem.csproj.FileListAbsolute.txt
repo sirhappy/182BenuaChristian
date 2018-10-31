@@ -1,0 +1,10 @@
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/bin/Debug/netcoreapp2.1/Task4Sem.deps.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/bin/Debug/netcoreapp2.1/Task4Sem.runtimeconfig.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/bin/Debug/netcoreapp2.1/Task4Sem.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/bin/Debug/netcoreapp2.1/Task4Sem.dll
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/bin/Debug/netcoreapp2.1/Task4Sem.pdb
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/obj/Debug/netcoreapp2.1/Task4Sem.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/obj/Debug/netcoreapp2.1/Task4Sem.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/obj/Debug/netcoreapp2.1/Task4Sem.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/obj/Debug/netcoreapp2.1/Task4Sem.dll
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task4Sem/obj/Debug/netcoreapp2.1/Task4Sem.pdb

@@ -1,0 +1,10 @@
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/obj/Debug/netcoreapp2.1/Task1HW.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/obj/Debug/netcoreapp2.1/Task1HW.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/obj/Debug/netcoreapp2.1/Task1HW.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/bin/Debug/netcoreapp2.1/Task1HW.deps.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/bin/Debug/netcoreapp2.1/Task1HW.runtimeconfig.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/bin/Debug/netcoreapp2.1/Task1HW.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/bin/Debug/netcoreapp2.1/Task1HW.dll
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/bin/Debug/netcoreapp2.1/Task1HW.pdb
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/obj/Debug/netcoreapp2.1/Task1HW.dll
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task1HW/obj/Debug/netcoreapp2.1/Task1HW.pdb

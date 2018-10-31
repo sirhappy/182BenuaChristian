@@ -1,0 +1,10 @@
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/bin/Debug/netcoreapp2.1/Task2HW.deps.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/bin/Debug/netcoreapp2.1/Task2HW.runtimeconfig.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/bin/Debug/netcoreapp2.1/Task2HW.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/bin/Debug/netcoreapp2.1/Task2HW.dll
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/bin/Debug/netcoreapp2.1/Task2HW.pdb
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/obj/Debug/netcoreapp2.1/Task2HW.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/obj/Debug/netcoreapp2.1/Task2HW.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/obj/Debug/netcoreapp2.1/Task2HW.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/obj/Debug/netcoreapp2.1/Task2HW.dll
+/Users/Christian/Desktop/HSE/1module/sem3/homework3/Task2HW/obj/Debug/netcoreapp2.1/Task2HW.pdb

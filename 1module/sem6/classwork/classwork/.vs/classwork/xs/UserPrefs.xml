@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{600D6C79-9F25-4EA4-B35A-56301DC539EC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="task3/Program2.cs">
+    <Files>
+      <File FileName="task2/Program.cs" Line="3" Column="1" />
+      <File FileName="task3/Program.cs" Line="34" Column="2" />
+      <File FileName="zooAnimal.ser" />
+      <File FileName="task3/Program2.cs" Line="1" Column="1" />
+      <File FileName="ZooTask2/Program.cs" Line="12" Column="2" />
+      <File FileName="task3/obj/Debug/netcoreapp2.1/task3.AssemblyInfo.cs" Line="14" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Christian/Desktop/HSE/1module/sem6/classwork/classwork/task3/Program.cs" relfile="task3/Program.cs" line="39" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ZooTask2 FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.classwork PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.task2 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
