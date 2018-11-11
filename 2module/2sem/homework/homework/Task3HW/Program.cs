@@ -4,6 +4,9 @@ namespace Task3HW
 {
 
     public class Complex {
+        public static void Div0() {
+            Console.WriteLine("You can't divide by zero");
+        }
         double a, b;
 
         public Complex() {
@@ -90,15 +93,39 @@ namespace Task3HW
         }
 
         public static Complex operator / (Complex a, double b) {
-            return new Complex(a.Re / b, a.Im / b);
+            if (Math.Abs(b) < 1e-7)
+            {
+                Div0();
+                return new Complex();
+            }
+            else
+            {
+                return new Complex(a.Re / b, a.Im / b);
+            }
         }
 
         public static Complex operator / (Complex a, Complex b) {
-            return new Complex(a.Re * b.Re + a.Im * b.Im, -a.Re * b.Im + a.Im * b.Re) / b.Abs / b.Abs;
+            if (b.Abs < 1e-7)
+            {
+                Div0();
+                return new Complex();
+            }
+            else
+            {
+                return new Complex(a.Re * b.Re + a.Im * b.Im, -a.Re * b.Im + a.Im * b.Re) / b.Abs / b.Abs;
+            }
         }
 
         public static Complex operator / (double b, Complex a) {
-            return new Complex(new Complex(b, 0) / a);
+            if (a.Abs < 1e-7)
+            {
+                Div0();
+                return new Complex();
+            }
+            else
+            {
+                return new Complex(new Complex(b, 0) / a);
+            }
         }
         public override string ToString()
         {
