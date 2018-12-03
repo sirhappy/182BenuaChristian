@@ -1,0 +1,58 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "task5/1.0.0": {
+        "dependencies": {
+          "Generators": "1.0.0",
+          "Readers": "1.0.0",
+          "Task5Lib": "1.0.0"
+        },
+        "runtime": {
+          "task5.dll": {}
+        }
+      },
+      "Generators/1.0.0": {
+        "runtime": {
+          "Generators.dll": {}
+        }
+      },
+      "Readers/1.0.0": {
+        "runtime": {
+          "Readers.dll": {}
+        }
+      },
+      "Task5Lib/1.0.0": {
+        "runtime": {
+          "Task5Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "task5/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Generators/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Readers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Task5Lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

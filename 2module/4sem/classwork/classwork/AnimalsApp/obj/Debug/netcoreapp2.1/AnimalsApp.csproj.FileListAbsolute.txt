@@ -1,0 +1,14 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/obj/Debug/netcoreapp2.1/AnimalsApp.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/obj/Debug/netcoreapp2.1/AnimalsApp.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/obj/Debug/netcoreapp2.1/AnimalsApp.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/obj/Debug/netcoreapp2.1/AnimalsApp.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/bin/Debug/netcoreapp2.1/AnimalsApp.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/bin/Debug/netcoreapp2.1/AnimalsApp.runtimeconfig.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/bin/Debug/netcoreapp2.1/AnimalsApp.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/bin/Debug/netcoreapp2.1/AnimalsApp.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/bin/Debug/netcoreapp2.1/AnimalsApp.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/bin/Debug/netcoreapp2.1/Animals.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/bin/Debug/netcoreapp2.1/Animals.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/obj/Debug/netcoreapp2.1/AnimalsApp.csproj.CopyComplete
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/obj/Debug/netcoreapp2.1/AnimalsApp.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/AnimalsApp/obj/Debug/netcoreapp2.1/AnimalsApp.pdb

@@ -1,0 +1,14 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/bin/Debug/netcoreapp2.1/CinderellaApp.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/bin/Debug/netcoreapp2.1/CinderellaApp.runtimeconfig.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/bin/Debug/netcoreapp2.1/CinderellaApp.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/bin/Debug/netcoreapp2.1/CinderellaApp.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/bin/Debug/netcoreapp2.1/CinderellaApp.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/bin/Debug/netcoreapp2.1/Cinderella.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/bin/Debug/netcoreapp2.1/Cinderella.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/obj/Debug/netcoreapp2.1/CinderellaApp.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/obj/Debug/netcoreapp2.1/CinderellaApp.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/obj/Debug/netcoreapp2.1/CinderellaApp.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/obj/Debug/netcoreapp2.1/CinderellaApp.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/obj/Debug/netcoreapp2.1/CinderellaApp.csproj.CopyComplete
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/obj/Debug/netcoreapp2.1/CinderellaApp.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/CinderellaApp/obj/Debug/netcoreapp2.1/CinderellaApp.pdb

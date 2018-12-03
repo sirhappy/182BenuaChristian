@@ -1,0 +1,9 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/bin/Debug/netcoreapp2.1/Figures.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/bin/Debug/netcoreapp2.1/Figures.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/bin/Debug/netcoreapp2.1/Figures.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/obj/Debug/netcoreapp2.1/Figures.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/obj/Debug/netcoreapp2.1/Figures.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/obj/Debug/netcoreapp2.1/Figures.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/obj/Debug/netcoreapp2.1/Figures.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/obj/Debug/netcoreapp2.1/Figures.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Figures/obj/Debug/netcoreapp2.1/Figures.csprojAssemblyReference.cache

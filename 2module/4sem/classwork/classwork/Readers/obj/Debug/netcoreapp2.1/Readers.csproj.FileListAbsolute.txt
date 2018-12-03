@@ -1,0 +1,8 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Readers/bin/Debug/netcoreapp2.1/Readers.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Readers/bin/Debug/netcoreapp2.1/Readers.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Readers/bin/Debug/netcoreapp2.1/Readers.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Readers/obj/Debug/netcoreapp2.1/Readers.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Readers/obj/Debug/netcoreapp2.1/Readers.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Readers/obj/Debug/netcoreapp2.1/Readers.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Readers/obj/Debug/netcoreapp2.1/Readers.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Readers/obj/Debug/netcoreapp2.1/Readers.pdb

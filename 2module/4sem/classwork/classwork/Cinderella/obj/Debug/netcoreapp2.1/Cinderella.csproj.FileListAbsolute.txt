@@ -1,0 +1,8 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Cinderella/bin/Debug/netcoreapp2.1/Cinderella.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Cinderella/bin/Debug/netcoreapp2.1/Cinderella.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Cinderella/bin/Debug/netcoreapp2.1/Cinderella.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Cinderella/obj/Debug/netcoreapp2.1/Cinderella.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Cinderella/obj/Debug/netcoreapp2.1/Cinderella.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Cinderella/obj/Debug/netcoreapp2.1/Cinderella.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Cinderella/obj/Debug/netcoreapp2.1/Cinderella.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Cinderella/obj/Debug/netcoreapp2.1/Cinderella.pdb

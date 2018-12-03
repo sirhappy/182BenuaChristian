@@ -1,0 +1,9 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/bin/Debug/netcoreapp2.1/EmployeesClassLibrary.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/bin/Debug/netcoreapp2.1/EmployeesClassLibrary.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/bin/Debug/netcoreapp2.1/EmployeesClassLibrary.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/obj/Debug/netcoreapp2.1/EmployeesClassLibrary.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/obj/Debug/netcoreapp2.1/EmployeesClassLibrary.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/obj/Debug/netcoreapp2.1/EmployeesClassLibrary.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/obj/Debug/netcoreapp2.1/EmployeesClassLibrary.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/obj/Debug/netcoreapp2.1/EmployeesClassLibrary.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/EmployeesClassLibrary/obj/Debug/netcoreapp2.1/EmployeesClassLibrary.csprojAssemblyReference.cache

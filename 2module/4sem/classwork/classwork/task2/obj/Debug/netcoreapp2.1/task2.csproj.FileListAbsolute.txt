@@ -1,0 +1,14 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/bin/Debug/netcoreapp2.1/task2.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/bin/Debug/netcoreapp2.1/task2.runtimeconfig.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/bin/Debug/netcoreapp2.1/task2.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/bin/Debug/netcoreapp2.1/task2.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/bin/Debug/netcoreapp2.1/task2.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/bin/Debug/netcoreapp2.1/Figures.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/bin/Debug/netcoreapp2.1/Figures.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/obj/Debug/netcoreapp2.1/task2.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/obj/Debug/netcoreapp2.1/task2.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/obj/Debug/netcoreapp2.1/task2.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/obj/Debug/netcoreapp2.1/task2.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/obj/Debug/netcoreapp2.1/task2.csproj.CopyComplete
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/obj/Debug/netcoreapp2.1/task2.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/task2/obj/Debug/netcoreapp2.1/task2.pdb

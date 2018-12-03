@@ -1,0 +1,9 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/bin/Debug/netcoreapp2.1/Generators.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/bin/Debug/netcoreapp2.1/Generators.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/bin/Debug/netcoreapp2.1/Generators.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/obj/Debug/netcoreapp2.1/Generators.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/obj/Debug/netcoreapp2.1/Generators.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/obj/Debug/netcoreapp2.1/Generators.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/obj/Debug/netcoreapp2.1/Generators.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/obj/Debug/netcoreapp2.1/Generators.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Generators/obj/Debug/netcoreapp2.1/Generators.pdb

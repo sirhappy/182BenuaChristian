@@ -1,0 +1,8 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/ClassLibrary/bin/Debug/netcoreapp2.1/ClassLibrary.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/ClassLibrary/bin/Debug/netcoreapp2.1/ClassLibrary.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/ClassLibrary/bin/Debug/netcoreapp2.1/ClassLibrary.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/ClassLibrary/obj/Debug/netcoreapp2.1/ClassLibrary.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/ClassLibrary/obj/Debug/netcoreapp2.1/ClassLibrary.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/ClassLibrary/obj/Debug/netcoreapp2.1/ClassLibrary.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/ClassLibrary/obj/Debug/netcoreapp2.1/ClassLibrary.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/ClassLibrary/obj/Debug/netcoreapp2.1/ClassLibrary.pdb

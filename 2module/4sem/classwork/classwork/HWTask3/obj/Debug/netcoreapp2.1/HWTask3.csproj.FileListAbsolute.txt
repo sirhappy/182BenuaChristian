@@ -1,0 +1,14 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/bin/Debug/netcoreapp2.1/HWTask3.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/bin/Debug/netcoreapp2.1/HWTask3.runtimeconfig.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/bin/Debug/netcoreapp2.1/HWTask3.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/bin/Debug/netcoreapp2.1/HWTask3.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/bin/Debug/netcoreapp2.1/HWTask3.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/bin/Debug/netcoreapp2.1/Figures.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/bin/Debug/netcoreapp2.1/Figures.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/obj/Debug/netcoreapp2.1/HWTask3.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/obj/Debug/netcoreapp2.1/HWTask3.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/obj/Debug/netcoreapp2.1/HWTask3.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/obj/Debug/netcoreapp2.1/HWTask3.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/obj/Debug/netcoreapp2.1/HWTask3.csproj.CopyComplete
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/obj/Debug/netcoreapp2.1/HWTask3.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/HWTask3/obj/Debug/netcoreapp2.1/HWTask3.pdb

@@ -1,0 +1,11 @@
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/obj/Debug/netcoreapp2.1/task10.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/obj/Debug/netcoreapp2.1/task10.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/obj/Debug/netcoreapp2.1/task10.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/obj/Debug/netcoreapp2.1/task10.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/bin/Debug/netcoreapp2.1/task10.deps.json
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/bin/Debug/netcoreapp2.1/task10.runtimeconfig.json
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/bin/Debug/netcoreapp2.1/task10.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/bin/Debug/netcoreapp2.1/task10.dll
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/bin/Debug/netcoreapp2.1/task10.pdb
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/obj/Debug/netcoreapp2.1/task10.dll
+/Users/Christian/Desktop/HSE/2module/3sem/classwork/classwork/task10/obj/Debug/netcoreapp2.1/task10.pdb

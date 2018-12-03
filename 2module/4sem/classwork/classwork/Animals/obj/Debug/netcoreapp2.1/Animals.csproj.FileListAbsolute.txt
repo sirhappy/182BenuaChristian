@@ -1,0 +1,8 @@
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Animals/obj/Debug/netcoreapp2.1/Animals.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Animals/obj/Debug/netcoreapp2.1/Animals.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Animals/obj/Debug/netcoreapp2.1/Animals.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Animals/bin/Debug/netcoreapp2.1/Animals.deps.json
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Animals/bin/Debug/netcoreapp2.1/Animals.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Animals/bin/Debug/netcoreapp2.1/Animals.pdb
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Animals/obj/Debug/netcoreapp2.1/Animals.dll
+/Users/Christian/Desktop/HSE/2module/4sem/classwork/classwork/Animals/obj/Debug/netcoreapp2.1/Animals.pdb
