@@ -77,7 +77,7 @@ namespace mylib
         }
 
         public RusString(int n, char st, char fin) : this() {
-            if (!Valid(st)) {
+            if (!Valid(st) || !Valid(fin)) {
                 throw new ArgumentOutOfRangeException();
             }
             if (n < 0) {
@@ -175,7 +175,7 @@ namespace mylib
 
         public LatString(int n, char st, char fin) : this()
         {
-            if (!Valid(st))
+            if (!Valid(st) || !Valid(fin))
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -215,6 +215,43 @@ namespace mylib
                 }
             }
             return true;
+        }
+    }
+
+    public class QuadraticTrinomial {
+        public double A { get; private set; }
+        public double B { get; private set; }
+        public double C { get; private set; }
+
+
+        public QuadraticTrinomial() {
+            A = B = C = 0;
+        }
+
+        public QuadraticTrinomial(double a, double b, double c) {
+            A = a;
+            B = b;
+            C = c;
+        }
+
+        public double Calculate(double x0) {
+            double ans = this.A * x0 * x0 + this.B * x0 + C;
+            if (double.IsInfinity(ans)) {
+                throw new OverflowException("Too big value in this point");
+            }
+            return ans;
+        }
+
+        public double Divide(double x0, QuadraticTrinomial other) {
+            if (Math.Abs(other.Calculate(x0)) < 1e-7) {
+                throw new DivideByZeroException("rvalue in this point was almost zero");
+            }
+            double ans = Calculate(x0) / other.Calculate(x0);
+            if (double.IsInfinity(ans))
+            {
+                throw new OverflowException("Too big value in this point");
+            }
+            return ans;
         }
     }
 }
