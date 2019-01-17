@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "classwork/1.0.0": {
+        "dependencies": {
+          "mylib": "1.0.0"
+        },
+        "runtime": {
+          "classwork.dll": {}
+        }
+      },
+      "mylib/1.0.0": {
+        "runtime": {
+          "mylib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "classwork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "mylib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

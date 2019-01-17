@@ -1,0 +1,8 @@
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/mylib/bin/Debug/netcoreapp2.1/mylib.deps.json
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/mylib/bin/Debug/netcoreapp2.1/mylib.dll
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/mylib/bin/Debug/netcoreapp2.1/mylib.pdb
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/mylib/obj/Debug/netcoreapp2.1/mylib.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/mylib/obj/Debug/netcoreapp2.1/mylib.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/mylib/obj/Debug/netcoreapp2.1/mylib.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/mylib/obj/Debug/netcoreapp2.1/mylib.dll
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/mylib/obj/Debug/netcoreapp2.1/mylib.pdb

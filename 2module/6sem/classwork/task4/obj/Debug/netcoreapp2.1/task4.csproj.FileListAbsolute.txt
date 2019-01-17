@@ -1,0 +1,14 @@
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/bin/Debug/netcoreapp2.1/task4.deps.json
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/bin/Debug/netcoreapp2.1/task4.runtimeconfig.json
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/bin/Debug/netcoreapp2.1/task4.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/bin/Debug/netcoreapp2.1/task4.dll
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/bin/Debug/netcoreapp2.1/task4.pdb
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/bin/Debug/netcoreapp2.1/mylib.dll
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/bin/Debug/netcoreapp2.1/mylib.pdb
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/obj/Debug/netcoreapp2.1/task4.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/obj/Debug/netcoreapp2.1/task4.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/obj/Debug/netcoreapp2.1/task4.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/obj/Debug/netcoreapp2.1/task4.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/obj/Debug/netcoreapp2.1/task4.csproj.CopyComplete
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/obj/Debug/netcoreapp2.1/task4.dll
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/task4/obj/Debug/netcoreapp2.1/task4.pdb

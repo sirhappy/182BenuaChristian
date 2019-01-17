@@ -1,0 +1,14 @@
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/bin/Debug/netcoreapp2.1/KR.deps.json
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/bin/Debug/netcoreapp2.1/KR.runtimeconfig.json
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/bin/Debug/netcoreapp2.1/KR.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/bin/Debug/netcoreapp2.1/KR.dll
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/bin/Debug/netcoreapp2.1/KR.pdb
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/bin/Debug/netcoreapp2.1/mylib.dll
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/bin/Debug/netcoreapp2.1/mylib.pdb
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/obj/Debug/netcoreapp2.1/KR.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/obj/Debug/netcoreapp2.1/KR.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/obj/Debug/netcoreapp2.1/KR.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/obj/Debug/netcoreapp2.1/KR.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/obj/Debug/netcoreapp2.1/KR.csproj.CopyComplete
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/obj/Debug/netcoreapp2.1/KR.dll
+/Users/Christian/Desktop/HSE/2module/6sem/classwork/KR/obj/Debug/netcoreapp2.1/KR.pdb
