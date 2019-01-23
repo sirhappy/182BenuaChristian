@@ -1,12 +1,13 @@
-﻿<Properties StartupConfiguration="{565358E4-03C0-4757-8348-4D5F66F4D367}|Default">
+﻿<Properties StartupConfiguration="{46E51195-9A18-4486-976B-ACF6A6D0DE23}|Default">
   <MonoDevelop.Ide.ItemProperties.task2 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="task5/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="classWork Status">
     <Files>
       <File FileName="classWork/Program.cs" Line="23" Column="18" />
       <File FileName="task2/Program.cs" Line="36" Column="30" />
       <File FileName="task3/Program.cs" Line="67" Column="56" />
-      <File FileName="task4/Program.cs" Line="326" Column="50" />
+      <File FileName="task4/Program.cs" Line="302" Column="23" />
       <File FileName="task5/Program.cs" Line="56" Column="38" />
+      <File FileName="classWork Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.classWork PreferredExecutionTarget="MonoDevelop.Default" />
