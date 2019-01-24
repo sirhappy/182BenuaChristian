@@ -1,0 +1,11 @@
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/bin/Debug/netcoreapp2.1/homework.deps.json
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/bin/Debug/netcoreapp2.1/homework.runtimeconfig.json
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/bin/Debug/netcoreapp2.1/homework.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/bin/Debug/netcoreapp2.1/homework.dll
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/bin/Debug/netcoreapp2.1/homework.pdb
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/obj/Debug/netcoreapp2.1/homework.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/obj/Debug/netcoreapp2.1/homework.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/obj/Debug/netcoreapp2.1/homework.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/obj/Debug/netcoreapp2.1/homework.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/obj/Debug/netcoreapp2.1/homework.dll
+/Users/Christian/Desktop/HSE/3module/2sem/homework/homework/homework/obj/Debug/netcoreapp2.1/homework.pdb
