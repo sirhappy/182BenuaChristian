@@ -218,8 +218,9 @@ namespace task8
                 Array.Sort(arr, Comapre);
 
                 Array.ForEach(arr, (el) => Console.WriteLine(el + " "));
-
-
+                Console.WriteLine();
+                Array.ForEach(Array.ConvertAll<Plant, Plant>(arr, (a) => new Plant(a.Growth, a.PhotoSensitivity,
+                (int)a.FrostResistance % 2 == 0 ? a.FrostResistance / 3 : a.FrostResistance / 2)), (el) => Console.WriteLine(el + " "));
 
                 Console.WriteLine("To exit press escape");
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
