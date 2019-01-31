@@ -216,7 +216,6 @@ namespace task8
                 Console.WriteLine();
 
                 Array.Sort(arr, Comapre);
-
                 Array.ForEach(arr, (el) => Console.WriteLine(el + " "));
                 Console.WriteLine();
                 Array.ForEach(Array.ConvertAll<Plant, Plant>(arr, (a) => new Plant(a.Growth, a.PhotoSensitivity,

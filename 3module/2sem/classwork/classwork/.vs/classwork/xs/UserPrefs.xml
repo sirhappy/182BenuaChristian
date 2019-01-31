@@ -1,14 +1,13 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{314A6199-E015-4013-8353-17FE4F1967FE}|Default">
   <MonoDevelop.Ide.ItemProperties.task2 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.task8 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="classwork Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="task8/Program.cs">
     <Files>
       <File FileName="classwork/Program.cs" Line="48" Column="33" />
       <File FileName="task2/Program.cs" Line="36" Column="1" />
       <File FileName="task3/Program.cs" Line="1" Column="1" />
       <File FileName="task5/Program.cs" Line="48" Column="28" />
-      <File FileName="task8/Program.cs" Line="221" Column="37" />
-      <File FileName="classwork Status" />
+      <File FileName="task8/Program.cs" Line="220" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.task5 PreferredExecutionTarget="MonoDevelop.Default" />

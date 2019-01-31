@@ -1,0 +1,9 @@
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\bin\Debug\task3.exe.config
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\bin\Debug\task3.exe
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\bin\Debug\task3.pdb
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\obj\Debug\task3.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\obj\Debug\task3.Properties.Resources.resources
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\obj\Debug\task3.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\obj\Debug\task3.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\obj\Debug\task3.exe
+\\Mac\Home\Desktop\HSE\3module\3sem\claswork\classWork\task3\task3\obj\Debug\task3.pdb

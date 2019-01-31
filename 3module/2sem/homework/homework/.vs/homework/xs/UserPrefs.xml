@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{E280EF2F-D296-4313-AD4B-DB56B0A47A67}|Default">
   <MonoDevelop.Ide.ItemProperties.task2 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="homework Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="task2/Program.cs">
     <Files>
       <File FileName="homework/Program.cs" Line="19" Column="79" />
-      <File FileName="task2/Program.cs" Line="24" Column="1" />
+      <File FileName="task2/Program.cs" Line="20" Column="1" />
       <File FileName="task3/Program.cs" Line="22" Column="64" />
-      <File FileName="homework Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

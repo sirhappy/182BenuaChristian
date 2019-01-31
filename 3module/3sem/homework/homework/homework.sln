@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework", "homework\homework.csproj", "{878B313E-94CC-4120-9289-0CC1072A853F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task2", "task2\task2.csproj", "{7ADF03DF-E452-48CC-828A-3811E8DC2209}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{878B313E-94CC-4120-9289-0CC1072A853F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878B313E-94CC-4120-9289-0CC1072A853F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878B313E-94CC-4120-9289-0CC1072A853F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878B313E-94CC-4120-9289-0CC1072A853F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ADF03DF-E452-48CC-828A-3811E8DC2209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADF03DF-E452-48CC-828A-3811E8DC2209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADF03DF-E452-48CC-828A-3811E8DC2209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADF03DF-E452-48CC-828A-3811E8DC2209}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

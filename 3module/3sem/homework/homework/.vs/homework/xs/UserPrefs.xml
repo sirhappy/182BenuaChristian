@@ -1,0 +1,17 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{7ADF03DF-E452-48CC-828A-3811E8DC2209}|Default">
+  <MonoDevelop.Ide.ItemProperties.task2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="homework Status">
+    <Files>
+      <File FileName="homework/Program.cs" Line="79" Column="10" />
+      <File FileName="task2/Program.cs" Line="144" Column="71" />
+      <File FileName="homework Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.homework PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

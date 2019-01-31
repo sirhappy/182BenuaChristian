@@ -1,0 +1,11 @@
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/bin/Debug/netcoreapp2.1/classWork.deps.json
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/bin/Debug/netcoreapp2.1/classWork.runtimeconfig.json
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/bin/Debug/netcoreapp2.1/classWork.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/bin/Debug/netcoreapp2.1/classWork.dll
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/bin/Debug/netcoreapp2.1/classWork.pdb
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/obj/Debug/netcoreapp2.1/classWork.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/obj/Debug/netcoreapp2.1/classWork.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/obj/Debug/netcoreapp2.1/classWork.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/obj/Debug/netcoreapp2.1/classWork.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/obj/Debug/netcoreapp2.1/classWork.dll
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/classWork/obj/Debug/netcoreapp2.1/classWork.pdb

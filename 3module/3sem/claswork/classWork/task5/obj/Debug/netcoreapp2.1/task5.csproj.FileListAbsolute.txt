@@ -1,0 +1,10 @@
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/bin/Debug/netcoreapp2.1/task5.deps.json
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/bin/Debug/netcoreapp2.1/task5.runtimeconfig.json
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/bin/Debug/netcoreapp2.1/task5.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/bin/Debug/netcoreapp2.1/task5.dll
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/bin/Debug/netcoreapp2.1/task5.pdb
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/obj/Debug/netcoreapp2.1/task5.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/obj/Debug/netcoreapp2.1/task5.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/obj/Debug/netcoreapp2.1/task5.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/obj/Debug/netcoreapp2.1/task5.dll
+/Users/Christian/Desktop/HSE/3module/3sem/claswork/classWork/task5/obj/Debug/netcoreapp2.1/task5.pdb
