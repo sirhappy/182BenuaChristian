@@ -1,0 +1,10 @@
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\obj\Debug\task5.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\obj\Debug\task5.Form1.resources
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\obj\Debug\task5.Properties.Resources.resources
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\obj\Debug\task5.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\obj\Debug\task5.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\bin\Debug\task5.exe.config
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\bin\Debug\task5.exe
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\bin\Debug\task5.pdb
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\obj\Debug\task5.exe
+\\Mac\Home\Desktop\HSE\3module\4sem\classwork\classwork\task5\obj\Debug\task5.pdb

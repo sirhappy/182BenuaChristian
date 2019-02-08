@@ -1,0 +1,10 @@
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/bin/Debug/netcoreapp2.1/task6.deps.json
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/bin/Debug/netcoreapp2.1/task6.runtimeconfig.json
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/bin/Debug/netcoreapp2.1/task6.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/bin/Debug/netcoreapp2.1/task6.dll
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/bin/Debug/netcoreapp2.1/task6.pdb
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/obj/Debug/netcoreapp2.1/task6.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/obj/Debug/netcoreapp2.1/task6.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/obj/Debug/netcoreapp2.1/task6.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/obj/Debug/netcoreapp2.1/task6.dll
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/ефыл6/obj/Debug/netcoreapp2.1/task6.pdb

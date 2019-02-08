@@ -1,0 +1,11 @@
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/bin/Debug/netcoreapp2.1/classwork.deps.json
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/bin/Debug/netcoreapp2.1/classwork.runtimeconfig.json
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/bin/Debug/netcoreapp2.1/classwork.runtimeconfig.dev.json
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/bin/Debug/netcoreapp2.1/classwork.dll
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/bin/Debug/netcoreapp2.1/classwork.pdb
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/obj/Debug/netcoreapp2.1/classwork.csprojAssemblyReference.cache
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/obj/Debug/netcoreapp2.1/classwork.csproj.CoreCompileInputs.cache
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/obj/Debug/netcoreapp2.1/classwork.AssemblyInfoInputs.cache
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/obj/Debug/netcoreapp2.1/classwork.AssemblyInfo.cs
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/obj/Debug/netcoreapp2.1/classwork.dll
+/Users/Christian/Desktop/HSE/3module/4sem/classwork/classwork/classwork/obj/Debug/netcoreapp2.1/classwork.pdb
