@@ -1,0 +1,10 @@
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\bin\Debug\Deserialize.exe.config
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\bin\Debug\Deserialize.exe
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\bin\Debug\Deserialize.pdb
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\bin\Debug\EmeraldCityLib.dll
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\bin\Debug\EmeraldCityLib.pdb
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\obj\Debug\Deserialize.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\obj\Debug\Deserialize.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\obj\Debug\Deserialize.csproj.CopyComplete
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\obj\Debug\Deserialize.exe
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\Deserialize\obj\Debug\Deserialize.pdb

@@ -1,0 +1,10 @@
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\bin\Debug\EmeraldCity.exe.config
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\bin\Debug\EmeraldCity.exe
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\bin\Debug\EmeraldCity.pdb
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\bin\Debug\EmeraldCityLib.dll
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\bin\Debug\EmeraldCityLib.pdb
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\obj\Debug\EmeraldCity.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\obj\Debug\EmeraldCity.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\obj\Debug\EmeraldCity.csproj.CopyComplete
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\obj\Debug\EmeraldCity.exe
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCity\obj\Debug\EmeraldCity.pdb

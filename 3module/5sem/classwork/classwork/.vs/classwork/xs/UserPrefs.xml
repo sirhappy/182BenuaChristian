@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{F3FEE150-49AF-4ADE-B072-3DAC731A7188}|Default">
+  <MonoDevelop.Ide.ItemProperties.task1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmeraldCityLib/Class1.cs">
+    <Files>
+      <File FileName="task1/Program.cs" Line="5" Column="15" />
+      <File FileName="Figures/Class1.cs" Line="128" Column="141" />
+      <File FileName="EmeraldCity/Program.cs" Line="1" Column="1" />
+      <File FileName="EmeraldCityLib/Class1.cs" Line="56" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EmeraldCity FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.EmeraldCityLib FirstBuild="True" />
+</Properties>

@@ -1,0 +1,6 @@
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCityLib\bin\Debug\EmeraldCityLib.dll
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCityLib\bin\Debug\EmeraldCityLib.pdb
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCityLib\obj\Debug\EmeraldCityLib.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCityLib\obj\Debug\EmeraldCityLib.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCityLib\obj\Debug\EmeraldCityLib.dll
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\EmeraldCityLib\obj\Debug\EmeraldCityLib.pdb
