@@ -99,7 +99,7 @@ namespace EmeraldCity
 
                 List<Street> streetArray = new List<Street>();
 
-                if (lines.Where((arg) => arg.Count() > 1).Any((arg) => !FileContentChecker.CheckLineContent(arg).Item1))
+                if (lines.Where((arg) => arg.Count() > 0).Any((arg) => !FileContentChecker.CheckLineContent(arg).Item1))
                 {
                     Console.WriteLine("Warning, invalid file format!!");
                     for (int i = 0; i < n; ++i)
