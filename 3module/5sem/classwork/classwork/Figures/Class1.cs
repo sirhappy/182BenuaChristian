@@ -5,6 +5,19 @@ using System.Linq;
 
 namespace Figures
 {
+
+    public static class RandomContainer
+    {
+        private static Random rnd = new Random();
+
+        public static double NextDouble(double mn, double mx)
+        {
+            return rnd.NextDouble() * (mx - mn) + mn;
+        }
+    }
+
+    
+
     public class Reader
     {
         public static T Read<T>(string In, string Out, Func<T, bool> valid) where T : struct
@@ -56,6 +69,11 @@ namespace Figures
             double y = Reader.Read<double>("Enter y coord of Point", "Smth wrong, reenter pls", (arg) => Math.Abs(arg) <= 10000);
             return new Point(x, y);
         }
+
+        public static Point MakePoint()
+        {
+            return new Point(RandomContainer.NextDouble(0, 100), RandomContainer.NextDouble(0, 100));
+        }
     }
 
     public class Circle
@@ -81,6 +99,42 @@ namespace Figures
             Point center = Point.ReadPoint();
             return new Circle(center, r);
         }
+
+        public static Circle MakeCircle()
+        {
+            return new Circle(Point.MakePoint(), RandomContainer.NextDouble(1, 100));
+        }
+    }
+
+    public class Cone
+    {
+        public Circle Circle { get; private set; }
+
+        public Point Apex { get; private set; }
+
+        public Cone(double rad, double centerX, double centerY, double apexX, double apexY)
+        {
+            Circle = new Circle(new Point(centerX, centerY), rad);
+            Apex = new Point(apexX, apexY);
+        }
+
+        public Cone(Circle circle, Point apex)
+        {
+            Circle = circle;
+            Apex = apex;
+        }
+
+        public double CutArea => Apex.Distance(Circle.Center) * Circle.Radius;
+
+        public override string ToString()
+        {
+            return $"Cone with Circle: {this.Circle}, and Apex {Apex}, CutArea: {CutArea}";
+        }
+
+        public static Cone MakeCone()
+        {
+            return new Cone(Circle.MakeCircle(), Point.MakePoint());
+        }
     }
 
     public class Triangle
@@ -89,6 +143,7 @@ namespace Figures
 
         public Triangle(Point a, Point b, Point c)
         {
+            Points = new List<Point>();
             Points.Add(new Point(a));
             Points.Add(new Point(b));
             Points.Add(new Point(c));
@@ -96,6 +151,7 @@ namespace Figures
 
         public Triangle(params Point[] points)
         {
+            Points = new List<Point>();
             Array.ForEach(points, (el) => this.Points.Add(new Point(el)));
         }
 
@@ -127,5 +183,18 @@ namespace Figures
 
         public double Area => Math.Sqrt((Perimeter / 2) * (Perimeter / 2 - this[0]) * (Perimeter / 2 - this[1]) * (Perimeter / 2 - this[2]));
 
+
+        public bool IsPointInside(Point p)
+        {
+            double area = 0;
+            for (int i = 0; i < Points.Count; ++i)
+            {
+                int next = (i + 1) % Points.Count;
+
+                area += (new Triangle(Points[i], Points[next], p)).Area;
+            }
+
+            return Math.Abs(area - Area) <= 1e-7;
+        }
     }
 }

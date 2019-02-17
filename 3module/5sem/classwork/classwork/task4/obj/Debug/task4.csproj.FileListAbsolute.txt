@@ -1,0 +1,11 @@
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\bin\Debug\task4.exe.config
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\bin\Debug\task4.exe
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\bin\Debug\task4.pdb
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\obj\Debug\task4.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\obj\Debug\task4.DetailsWindow.resources
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\obj\Debug\task4.RandomContainer.resources
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\obj\Debug\task4.Properties.Resources.resources
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\obj\Debug\task4.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\obj\Debug\task4.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\obj\Debug\task4.exe
+\\Mac\Home\Desktop\HSE\3module\5sem\classwork\classwork\task4\obj\Debug\task4.pdb

@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Figures/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Figures.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Figures.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Figures/1.0.0": {
+      "type": "project",
+      "path": "../Figures/Figures.csproj",
+      "msbuildProject": "../Figures/Figures.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v2.1": [
+      "Figures >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Christian\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "\\\\Mac\\Home\\Desktop\\HSE\\3module\\5sem\\classwork\\classwork\\task2\\task2.csproj",
+      "projectName": "task2",
+      "projectPath": "\\\\Mac\\Home\\Desktop\\HSE\\3module\\5sem\\classwork\\classwork\\task2\\task2.csproj",
+      "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+      "outputPath": "\\\\Mac\\Home\\Desktop\\HSE\\3module\\5sem\\classwork\\classwork\\task2\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp2.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "projectReferences": {
+            "\\\\Mac\\Home\\Desktop\\HSE\\3module\\5sem\\classwork\\classwork\\Figures\\Figures.csproj": {
+              "projectPath": "\\\\Mac\\Home\\Desktop\\HSE\\3module\\5sem\\classwork\\classwork\\Figures\\Figures.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "netcoreapp2.1": {}
+    }
+  }
+}
