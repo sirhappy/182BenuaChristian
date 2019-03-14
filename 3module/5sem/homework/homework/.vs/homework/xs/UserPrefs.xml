@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{00E230DE-5A5E-458A-ACB5-719632FF2E2B}|Default">
-  <MonoDevelop.Ide.ItemProperties.task2 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.task2 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.task1 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="task2/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="homework Status">
     <Files>
-      <File FileName="task1/Program.cs" Line="75" Column="46" />
-      <File FileName="task2/Program.cs" Line="8" Column="9" />
+      <File FileName="task1/Program.cs" Line="105" Column="10" />
+      <File FileName="task2/Program.cs" Line="73" Column="26" />
+      <File FileName="homework Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
