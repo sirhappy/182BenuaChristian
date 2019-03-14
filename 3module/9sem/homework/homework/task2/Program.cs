@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace task1
+namespace task2
 {
-
     public static class RandomContainer
     {
         public static Random rnd = new Random();
@@ -29,7 +28,7 @@ namespace task1
         {
             ColorPoint colorPoint = new ColorPoint();
             colorPoint.X = RandomContainer.rnd.NextDouble();
-            colorPoint.Y = RandomContainer.rnd.NextDouble(); 
+            colorPoint.Y = RandomContainer.rnd.NextDouble();
             colorPoint.Color = colors[RandomContainer.rnd.Next(0, colors.Length)];
 
             return colorPoint;
@@ -61,17 +60,17 @@ namespace task1
         }
     }
 
+
     class Program
     {
-
         public static void FillFile(int n)
         {
-            using (StreamWriter writer = new StreamWriter("colors.txt"))
+            using (FileStream writer = new FileStream("colors.txt", FileMode.OpenOrCreate))
             {
                 for (int i = 0; i < n; ++i)
                 {
                     var color = ColorPoint.MakeColorPoint();
-                    writer.WriteLine(color.ToString());
+                    writer.Write(color.ToString().ToList().ConvertAll(el => (byte)el).ToArray(), 0, color.ToString().Length);
                 }
             }
         }
@@ -79,16 +78,24 @@ namespace task1
         public static List<ColorPoint> ReadFromFile()
         {
             List<ColorPoint> lst = new List<ColorPoint>();
-            using (StreamReader reader = new StreamReader("colors.txt"))
+            using (FileStream reader = new FileStream("colors.txt", FileMode.Open))
             {
-                while (!reader.EndOfStream)
+                char currentChar;
+                string currentWord = "";
+                int currentByte = 0;
+                while (currentByte >= 0)
                 {
-                    var components = reader.ReadLine().Split(' ');
-                    lst.Add(new ColorPoint(double.Parse(components[0]), double.Parse(components[1]), components[2]));
+                    while ((currentByte = (char)reader.ReadByte()) != -1 && (currentChar = (char)currentByte) != '\n')
+                    {
+                        currentWord += currentChar;
+                    }
+                    var comps = currentWord.Split(' ');
+                    lst.Add(new ColorPoint(double.Parse(comps[0]), double.Parse(comps[1]), comps[2]));
                 }
             }
             return lst;
         }
+
 
         static void Main(string[] args)
         {

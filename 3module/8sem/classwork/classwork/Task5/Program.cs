@@ -9,10 +9,10 @@ namespace Task5
 
     struct PointS : IComparable<PointS>
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
 
-        public PointS(int x, int y)
+        public PointS(double x, double y)
         {
             X = x;
             Y = y;
@@ -35,7 +35,7 @@ namespace Task5
 
         public override string ToString()
         {
-            return $"({X}, {Y})";
+            return $"({X:F3}, {Y:F3})";
         }
     }
 
@@ -53,7 +53,7 @@ namespace Task5
 
         public override string ToString()
         {
-            return $"Coords:{Coords}, mass: {Weight}";
+            return $"Coords:{Coords}, mass: {Weight:F3}";
         }
     }
 
@@ -61,9 +61,9 @@ namespace Task5
     {
         public PointS center { get; private set; }
 
-        public MassPoint[] arr { get; set; }
+        public MassPoint[] arr { get; private set; }
 
-        public double Radius { get; set; }
+        public double Radius { get; private set; }
 
         public MassPointSet(MassPoint[] source, double r, PointS center)
         {
@@ -90,15 +90,45 @@ namespace Task5
                     sumx += arr[i].Weight * arr[i].Coords.X;
                     sumy += arr[i].Weight * arr[i].Coords.Y;
                 }
-                return new MassPoint();
+                return new MassPoint(new PointS(sumx / mass, sumy / mass), mass);
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Radius: {Radius:F3}, center:{center}";
         }
     }
 
     class Program
     {
+        public static Random rnd = new Random();
+
         static void Main(string[] args)
         {
+            int n = int.Parse(Console.ReadLine());
+            List<MassPoint> points = new List<MassPoint>();
+            for (int i = 0; i < n; ++i)
+            {
+                points.Add(new MassPoint(new PointS(rnd.NextDouble() * 20 - 10, rnd.NextDouble() * 20 - 10), rnd.NextDouble()));
+                Console.WriteLine(points.Last());
+            }
+
+            do
+            {
+                Console.WriteLine("Enter Radius");
+                double r = double.Parse(Console.ReadLine());
+
+                MassPointSet set = new MassPointSet(points.ToArray(), r, new PointS(0, 0));
+
+                Console.WriteLine("All items in MassPointSet");
+                set.arr.ToList().ForEach(el => Console.WriteLine(el.ToString()));
+
+                Console.WriteLine("MassCenter");
+                Console.WriteLine(set.MassCenter);
+
+                Console.WriteLine("Esc");
+            } while (Console.ReadKey().Key != ConsoleKey.Escape);
         }
     }
 }
