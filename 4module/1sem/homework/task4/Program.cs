@@ -47,7 +47,7 @@ namespace task4
         
         int Divisor { get; set; }
         
-        int[] MultipliesOfDivisor { get; }
+        List<int> MultipliesOfDivisor { get; }
 
         void CreateMultipliesOfDivisor(int[] arr);
     }
@@ -62,7 +62,7 @@ namespace task4
         
         private string _name;
         private int _divisor;
-        private int[] _multipliesOfDivisor;
+        private List<int> _multipliesOfDivisor;
 
         [XmlIgnore]
         public string Name
@@ -85,7 +85,7 @@ namespace task4
         }
 
 
-        public int[] MultipliesOfDivisor
+        public List<int> MultipliesOfDivisor
         {
             get => _multipliesOfDivisor;
             set => _multipliesOfDivisor = value;
@@ -93,7 +93,7 @@ namespace task4
 
         public void CreateMultipliesOfDivisor(int[] arr)
         {
-            this.MultipliesOfDivisor = arr.Where((el) => el % Divisor == 0).ToArray();
+            this.MultipliesOfDivisor = arr.Where((el) => el % Divisor == 0).ToList();
         }
 
         public Multiple()
@@ -293,7 +293,7 @@ namespace task4
                 coreAssembly.SerializationManager.Serialize("Multiple.ser", multiples);
                 coreAssembly.SerializationManager.Deserialize("Multiple.ser").ToList().ForEach(Console.WriteLine);
             }
-
+            //XML
             {
                 CoreAssembly<Multiple> coreAssembly = new CoreAssembly<Multiple>(SerializationType.XML);
                 coreAssembly.SerializationManager.Serialize("XmlMultiple.xml", multiples);
