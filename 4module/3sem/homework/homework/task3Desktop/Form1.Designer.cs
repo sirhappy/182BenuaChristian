@@ -40,6 +40,7 @@
             this.divideButton = new System.Windows.Forms.Button();
             this.incrementButton = new System.Windows.Forms.Button();
             this.decrementButton = new System.Windows.Forms.Button();
+            this.decimalResultTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lhsTextBox
@@ -130,7 +131,7 @@
             // 
             this.incrementButton.Location = new System.Drawing.Point(342, 258);
             this.incrementButton.Name = "incrementButton";
-            this.incrementButton.Size = new System.Drawing.Size(99, 29);
+            this.incrementButton.Size = new System.Drawing.Size(99, 45);
             this.incrementButton.TabIndex = 10;
             this.incrementButton.Text = "++";
             this.incrementButton.UseVisualStyleBackColor = true;
@@ -139,16 +140,24 @@
             // 
             this.decrementButton.Location = new System.Drawing.Point(575, 258);
             this.decrementButton.Name = "decrementButton";
-            this.decrementButton.Size = new System.Drawing.Size(107, 29);
+            this.decrementButton.Size = new System.Drawing.Size(107, 45);
             this.decrementButton.TabIndex = 11;
             this.decrementButton.Text = "--";
             this.decrementButton.UseVisualStyleBackColor = true;
+            // 
+            // decimalResultTextBox
+            // 
+            this.decimalResultTextBox.Location = new System.Drawing.Point(17, 402);
+            this.decimalResultTextBox.Name = "decimalResultTextBox";
+            this.decimalResultTextBox.Size = new System.Drawing.Size(771, 31);
+            this.decimalResultTextBox.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.decimalResultTextBox);
             this.Controls.Add(this.decrementButton);
             this.Controls.Add(this.incrementButton);
             this.Controls.Add(this.divideButton);
@@ -182,6 +191,7 @@
         private System.Windows.Forms.Button divideButton;
         private System.Windows.Forms.Button incrementButton;
         private System.Windows.Forms.Button decrementButton;
+        private System.Windows.Forms.TextBox decimalResultTextBox;
     }
 }
 

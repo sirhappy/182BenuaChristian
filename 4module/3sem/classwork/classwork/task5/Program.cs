@@ -9,6 +9,8 @@ namespace task5
         public double MinPoint { get; private set; }
         public double MaxPoint { get; private set; }
 
+        public double Length => MaxPoint - MinPoint;
+
         public Interval(double left, double right)
         {
 
@@ -30,7 +32,7 @@ namespace task5
 
         public override string ToString()
         {
-            return $"({MinPoint}, {MaxPoint})";
+            return $"({MinPoint:F3}, {MaxPoint:F3})";
         }
 
         public static Interval operator +(Interval a, Interval b)
@@ -75,9 +77,16 @@ namespace task5
             Interval a = new Interval(5, 9);
             Interval b = new Interval(6, 10);
             Console.WriteLine(a + b);
+            Console.WriteLine((a + b).Length);
             Console.WriteLine(a - b);
+            Console.WriteLine((a - b).Length);
+
             Console.WriteLine(a * b);
+            Console.WriteLine((a * b).Length);
+
             Console.WriteLine(a / b);
+            Console.WriteLine((a / b).Length);
+
         }
     }
 }

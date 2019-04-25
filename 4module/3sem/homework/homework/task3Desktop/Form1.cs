@@ -14,6 +14,7 @@ namespace task3Desktop
         {
             InitializeComponent();
             this.resultTextBox.Enabled = false;
+            this.decimalResultTextBox.Enabled = false;
             this.plusButton.Click += OnBinaryOperationClick;
             this.minusButton.Click += OnBinaryOperationClick;
             this.multiplyButton.Click += OnBinaryOperationClick;
@@ -25,6 +26,12 @@ namespace task3Desktop
             operationsDict[minusButton] = new Func<Fraction, Fraction, Fraction>((lhs, rhs) => lhs - rhs);
             operationsDict[multiplyButton] = new Func<Fraction, Fraction, Fraction>((lhs, rhs) => lhs * rhs);
             operationsDict[divideButton] = new Func<Fraction, Fraction, Fraction>((lhs, rhs) => lhs / rhs);
+        }
+
+        private void showResult(Fraction value)
+        {
+            this.resultTextBox.Text = value.ToString();
+            this.decimalResultTextBox.Text = value.ToDecimal().ToString();
         }
 
         public (bool, Fraction) ParseInputField(TextBox box)
@@ -74,7 +81,7 @@ namespace task3Desktop
                 }
 
                 value++;
-                this.resultTextBox.Text = value.ToString();
+                this.showResult(value);
             }
             catch (OverflowException ex)
             {
@@ -94,7 +101,7 @@ namespace task3Desktop
                 }
 
                 value--;
-                this.resultTextBox.Text = value.ToString();
+                this.showResult(value);
             }
             catch (DivideByZeroException ex)
             {
@@ -119,7 +126,7 @@ namespace task3Desktop
                 }
 
                 var result = operationsDict[sender as Button]?.Invoke(lhsValue, rhsValue);
-                this.resultTextBox.Text = result.ToString();
+                this.showResult(result);
             }
             catch (DivideByZeroException ex)
             {

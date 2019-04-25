@@ -71,39 +71,37 @@ namespace task6
                 return lhs;
             }
 
-            if (rhs.Degree == 0)
+            else if (rhs.Degree == 0)
             {
+                if (Math.Abs(rhs.B) < 1e-9)
+                {
+                    throw new DivideByZeroException();
+                }
                 return new Polynomial2(0, 0, 0);
             }
 
-            if (rhs.Degree == 1)
+            else if (rhs.Degree == 1)
             {
                 if (lhs.Degree == 1)
                 {
                     double mult = lhs.B / rhs.B;
                     return new Polynomial2(0, 0, lhs.C - mult * rhs.C);
                 }
-            }
-
-            if (lhs.Degree == 2)
-            {
-                if (rhs.Degree == 1)
+                else
                 {
                     double xMult = lhs.A / rhs.B;
                     var temp = lhs - new Polynomial2(rhs.B * xMult, rhs.C * xMult, 0);
                     double finalMult = temp.B / rhs.B;
                     return new Polynomial2(0, 0, temp.C - finalMult * rhs.C);
                 }
-
-                else
-                {
-                    double mult = lhs.A / rhs.A;
-                    var temp = lhs - (rhs * mult);
-                    return temp;
-                }
             }
 
-            return null;
+            else
+            {    
+                double mult = lhs.A / rhs.A;
+                var temp = lhs - (rhs * mult);
+                return temp;
+            }
         }
 
         public override string ToString()
