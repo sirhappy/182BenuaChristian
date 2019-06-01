@@ -39,5 +39,15 @@ namespace dbTask
 
             return Id == other.Id;
         }
+
+        public override bool Equals(object obj)
+        {
+            return this.Equals(obj as Shop);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
+        }
     }
 }

@@ -1,14 +1,14 @@
 namespace dbTask
 {
-    public class CustomerFactory:IEntityFactory<Customer>
+    public class CustomerFactory : ITestEntityFactory<Customer>
     {
-        public Customer Instance => new Customer(_lastGeneratedId++, _name, _lastName, _address, _district, _country, _postalIndex);
+        public override Customer Instance => new Customer(_lastGeneratedId++, _name, _lastName, _address, _district, _city, _country, _postalIndex);
 
         private string _name;
 
         private string _lastName;
 
-        public CustomerFactory(string name, string lastName, string address, string district, string country, string postalIndex)
+        public CustomerFactory(string name, string lastName, string address, string district, string city, string country, string postalIndex)
         {
             _name = name;
             _lastName = lastName;
@@ -16,6 +16,7 @@ namespace dbTask
             _district = district;
             _country = country;
             _postalIndex = postalIndex;
+            _city = city;
         }
 
         private string _address;
@@ -26,6 +27,7 @@ namespace dbTask
 
         private string _postalIndex;
 
-        private static long _lastGeneratedId = 0;
+        private string _city;
+        
     }
 }

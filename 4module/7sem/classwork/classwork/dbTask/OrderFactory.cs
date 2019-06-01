@@ -2,31 +2,29 @@ using System.Collections.Generic;
 
 namespace dbTask
 {
-    public class OrderFactory: IEntityFactory<Order>
+    public class OrderFactory: ITestEntityFactory<Order>
     {
-        public Order Instance => new Order(_lastGeneratedId++, _customersIds, _shopsId, _goodIds,
-            _goodsAmounts, _goodsCosts);
+        public override Order Instance => new Order(_lastGeneratedId++, _customerId, _shopId, _goodId,
+            _goodAmount, _goodCost);
+        
+        private long _customerId;
 
-        private static long _lastGeneratedId = 0;
+        private long _shopId;
 
-        private IList<long> _customersIds;
+        private long _goodId;
 
-        private IList<long> _shopsId;
+        private int _goodAmount;
 
-        private IList<long> _goodIds;
+        private double _goodCost;
 
-        private IList<int> _goodsAmounts;
-
-        private IList<double> _goodsCosts;
-
-        public OrderFactory(IList<long> customersIds, IList<long> shopsId, IList<long> goodIds,
-            IList<int> goodsAmounts, IList<double> goodsCosts)
+        public OrderFactory(long customerId, long shopId, long goodId,
+            int goodAmount, double goodCost)
         {
-            _customersIds = customersIds;
-            _shopsId = shopsId;
-            _goodIds = goodIds;
-            _goodsAmounts = goodsAmounts;
-            _goodsCosts = goodsCosts;
+            _customerId = customerId;
+            _shopId = shopId;
+            _goodId = goodId;
+            _goodAmount = goodAmount;
+            _goodCost = goodCost;
         }
     }
 }

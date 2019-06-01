@@ -14,19 +14,21 @@ namespace dbTask
         [DataMember]
         public string Description { get; private set;}
         
-        [DataMember]
-        public long ShopId { get; private set;}
         
         [DataMember]
         public string Category { get; private set; }
 
-        public Good(long id, string name, long shopId, string description, string category)
+        public Good(long id, string name, string description, string category)
         {
             Id = id;
             Name = name;
-            ShopId = shopId;
             Description = description;
             Category = category;
+        }
+
+        public override string ToString()
+        {
+            return $"Id:{Id}, Name:{Name}, Descr:{Description}, Category:{Category}";
         }
 
         public bool Equals(IEntity other)
@@ -37,6 +39,16 @@ namespace dbTask
             }
 
             return Id == other.Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.Equals(obj as Good);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
         }
     }
 }

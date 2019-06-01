@@ -1,6 +1,6 @@
 namespace dbTask
 {
-    public class ShopFactory: IEntityFactory<Shop>
+    public class ShopFactory: ITestEntityFactory<Shop>
     {
 
         public ShopFactory(string name, string city, string country, string phoneNumber)
@@ -11,7 +11,7 @@ namespace dbTask
             _phoneNumber = phoneNumber;
         }
         
-        public Shop Instance
+        public override Shop Instance
         {
             get
             {
@@ -26,7 +26,5 @@ namespace dbTask
         private string _country;
 
         private string _phoneNumber;
-        
-        private static long _lastGeneratedId = 0;
     }
 }

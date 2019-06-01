@@ -10,35 +10,36 @@ namespace dbTask
         public long Id { get; private set; }
         
         [DataMember]
-        public IList<long> CustomerIds { get; private set; }
+        public long CustomerId { get; private set; }
         
         [DataMember]
-        public IList<long> ShopIds { get; private set; }
+        public long ShopId { get; private set; }
         
         [DataMember]
-        public IList<long> GoodIds { get; private set;}
+        public long GoodId { get; private set;}
         
         [DataMember]
-        public IList<int> GoodsAmounts { get; private set;}
+        public int GoodAmount { get; private set;}
         
         [DataMember]
-        public IList<double> GoodsCosts { get; private set;}
+        public double GoodCost { get; private set;}
 
-        public Order(long id, IList<long> customerIds, IList<long> shopIds, IList<long> goodIds,
-            IList<int> goodsAmounts, IList<double> goodsCosts)
+        public Order(long id, long customerId, long shopId, long goodId,
+            int goodAmount, double goodCost)
         {
             Id = id;
-            CustomerIds = customerIds;
-            ShopIds = shopIds;
-            GoodIds = goodIds;
-            GoodsAmounts = goodsAmounts;
-            GoodsCosts = goodsCosts;
+            CustomerId = customerId;
+            ShopId = shopId;
+            GoodId = goodId;
+            GoodAmount = goodAmount;
+            GoodCost = goodCost;
         }
 
 
         public override string ToString()
         {
-            return $"Id:{Id}";
+            return $"Id:{Id}, CustomerId:{CustomerId}, ShopId:{ShopId}, GoodId:{GoodId}, GoodAmount:{GoodAmount}, " +
+                   $"GoodCost:{GoodCost:F3}";
         }
 
         public bool Equals(IEntity other)
@@ -50,6 +51,15 @@ namespace dbTask
 
             return Id == other.Id;
         }
-        
+
+        public override bool Equals(object obj)
+        {
+            return this.Equals(obj as Order);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
+        }
     }
 }

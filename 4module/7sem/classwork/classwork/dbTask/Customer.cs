@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace dbTask
@@ -21,14 +22,16 @@ namespace dbTask
         public string District { get; private set;}
         
         [DataMember]
+        public string City { get; private set; }
+        
+        [DataMember]
         public string Country { get; private set;}
         
         [DataMember]
         public string PostalIndex { get; private set;}
 
-        
 
-        public Customer(long id, string name, string lastName, string address, string district, string country,
+        public Customer(long id, string name, string lastName, string address, string district, string city, string country,
             string postalIndex)
         {
             this.Id = id;
@@ -38,6 +41,7 @@ namespace dbTask
             this.District = district;
             this.Country = country;
             this.PostalIndex = postalIndex;
+            this.City = city;
         }
         
         public bool Equals(IEntity other)
@@ -48,6 +52,16 @@ namespace dbTask
             }
 
             return other.Id == Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.Equals(obj as Customer);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
         }
     }
 }

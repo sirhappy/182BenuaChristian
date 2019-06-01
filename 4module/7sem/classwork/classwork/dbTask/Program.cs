@@ -16,27 +16,38 @@ namespace dbTask
             
             coreAssembly.MyDataBase.InsertInto<Shop>(new ShopFactory("Shop1", "city1", "country1", "phone1"));
             coreAssembly.MyDataBase.InsertInto<Shop>(new ShopFactory("Shop2", "city2", "country2", "phone2"));
+            coreAssembly.MyDataBase.InsertInto<Shop>(new ShopFactory("Shop3", "city3", "country2", "phone3"));
+            coreAssembly.MyDataBase.InsertInto<Shop>(new ShopFactory("Shop4", "city4", "country2", "phone4"));
+            coreAssembly.MyDataBase.InsertInto<Shop>(new ShopFactory("Shop5", "city5", "country1", "phone5"));
+
+
             
-            coreAssembly.MyDataBase.InsertInto<Good>(new GoodFactory("good1", 0, "desc1", "category1"));
-            coreAssembly.MyDataBase.InsertInto<Good>(new GoodFactory("good2", 1, "desc2", "category2"));
+            coreAssembly.MyDataBase.InsertInto<Good>(new GoodFactory("good1", "desc1", "category1"));
+            coreAssembly.MyDataBase.InsertInto<Good>(new GoodFactory("good2", "desc2", "category2"));
             
-            coreAssembly.MyDataBase.InsertInto<Customer>(new CustomerFactory("customer1", "lastname1", "address1",
-                "district1", "country1", "postalIndex1"));
+            coreAssembly.MyDataBase.InsertInto<Customer>(new CustomerFactory("customer1", "lastName1", "address1",
+                "district1", "city1", "country1", "postalIndex1"));
             coreAssembly.MyDataBase.InsertInto<Customer>(new CustomerFactory("customer22", "lastName2", "address2",
-                "district2", "country2", "postalIndex2"));
+                "district2", "city2", "country2", "postalIndex2"));
+            coreAssembly.MyDataBase.InsertInto<Customer>(new CustomerFactory("customer3", "lastName3", "address3",
+                "district3", "city3", "country3", "postalIndex3"));
+
+            coreAssembly.MyDataBase.InsertInto<Order>(new OrderFactory(1, 0,
+                0, 3, 3));
+            coreAssembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 0,
+                0, 3, 20));
            
-           
-            coreAssembly.MyDataBase.InsertInto<Order>(new OrderFactory(new List<long>(new long[]{0}), new List<long>(new long[]{0,1}),
-                new List<long>(new long[]{0, 1}), new List<int>(new int[]{2, 3}), new List<double>(new double[]{15, 20})));
-           
-            coreAssembly.MyDataBase.InsertInto<Order>(new OrderFactory(new List<long>(new long[]{1}), new List<long>(new long[]{0,1}),
-                new List<long>(new long[]{0, 1}), new List<int>(new int[]{15, 16}), new List<double>(new double[]{1, 2}))); 
+            coreAssembly.MyDataBase.InsertInto<Order>(new OrderFactory(1, 1,
+                1, 5, 3));
+            coreAssembly.MyDataBase.InsertInto<Order>(new OrderFactory(2, 0, 
+                0, 10, 3));
            
             SerializeAll(coreAssembly);
         }
 
         public static void FillFromJSON(CoreAssembly coreAssembly)
         {
+            coreAssembly.MyDataBase.ClearAll();
             coreAssembly.MyDataBase.RestoreDataTable<Shop>();
             coreAssembly.MyDataBase.RestoreDataTable<Good>();
             coreAssembly.MyDataBase.RestoreDataTable<Customer>();
@@ -57,10 +68,29 @@ namespace dbTask
         public static void TestRequests(CoreAssembly coreAssembly)
         {
             Console.WriteLine(coreAssembly.RequestsFactory.MostExpensiveGoodCategory(coreAssembly.MyDataBase));
+            Console.WriteLine();
             foreach (var el in coreAssembly.RequestsFactory.OrdersByCustomerWithLongestName(coreAssembly.MyDataBase))
             {
                 Console.WriteLine(el);
             }
+            Console.WriteLine();
+            Console.WriteLine(coreAssembly.RequestsFactory.LeastSellsCity(coreAssembly.MyDataBase));
+            Console.WriteLine();
+            foreach (var lastName in coreAssembly.RequestsFactory.CustomersLastNameWhoBoughtMostPopularGood(coreAssembly.MyDataBase))
+            {
+                Console.WriteLine(lastName);
+            }
+            Console.WriteLine();
+            Console.WriteLine(coreAssembly.RequestsFactory.ShopsAmountInCountryWithLeastAmountOfShops(coreAssembly.MyDataBase));
+            
+            Console.WriteLine();
+            foreach (var order in coreAssembly.RequestsFactory.OrdersInForeignCity(coreAssembly.MyDataBase))
+            {
+                Console.WriteLine(order);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine(coreAssembly.RequestsFactory.AllOrdersSum(coreAssembly.MyDataBase));
         }
         
         public static void Main(string[] args)

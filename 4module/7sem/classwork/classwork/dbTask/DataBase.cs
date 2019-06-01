@@ -65,14 +65,14 @@ namespace dbTask
 
         public void Serialize<T>(string prefix = "", string fileName = null) where T : IEntity
         {
-            fileName = fileName ?? "DB" + typeof(T).Name.Split('.').Last() + prefix + ".json";
+            fileName = fileName ?? "../../DB" + typeof(T).Name.Split('.').Last() + prefix + ".json";
             _serializationFactory.CollectionSerializer<T>().Serializer.Serialize(fileName, _tables[typeof(T)].Cast<T>());
         }
 
         public void RestoreDataTable<T>(string prefix = "", string fileName = null) where T : IEntity
         {
             this.CreateTableNoThrow<T>();
-            fileName = fileName ?? "DB" + typeof(T).Name.Split('.').Last() + prefix + ".json";
+            fileName = fileName ?? "../../DB" + typeof(T).Name.Split('.').Last() + prefix + ".json";
             FillTable<T>(this._serializationFactory.CollectionSerializer<T>().Deserialize(fileName).Cast<IEntity>());
         }
 
