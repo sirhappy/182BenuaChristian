@@ -4,22 +4,17 @@ using System.Runtime.Serialization;
 namespace dbTask
 {
     [DataContract]
-    public class Shop: IEntity
+    public class Shop : IEntity
     {
-        [DataMember]
-        public long Id { get; private set;}
-        
-        [DataMember]
-        public string Name { get; private set;}
-        
-        [DataMember]
-        public string City { get; private set;}
-        
-        [DataMember]
-        public string Country { get; private set;}
-        
-        [DataMember]
-        public string TelephoneNumber { get; private set;}
+        [DataMember] public long Id { get; private set; }
+
+        [DataMember] public string Name { get; private set; }
+
+        [DataMember] public string City { get; private set; }
+
+        [DataMember] public string Country { get; private set; }
+
+        [DataMember] public string TelephoneNumber { get; private set; }
 
         public Shop(long id, string name, string city, string country, string phoneNumber)
         {

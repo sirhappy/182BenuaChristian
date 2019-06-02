@@ -46,11 +46,13 @@
   <ItemGroup>
     <Compile Include="CollectionSerializationFactory.cs" />
     <Compile Include="CollectionSerializationManager.cs" />
+    <Compile Include="ConsoleManager.cs"/>
     <Compile Include="CoreAssembly.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerFactory.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="DataBaseException.cs" />
+    <Compile Include="FactoryCorrectnessChecker.cs"/>
     <Compile Include="Good.cs" />
     <Compile Include="GoodFactory.cs" />
     <Compile Include="IEntity.cs" />

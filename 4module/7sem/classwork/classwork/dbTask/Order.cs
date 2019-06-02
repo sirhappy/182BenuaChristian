@@ -4,25 +4,19 @@ using System.Runtime.Serialization;
 namespace dbTask
 {
     [DataContract]
-    public class Order: IEntity
+    public class Order : IEntity
     {
-        [DataMember]
-        public long Id { get; private set; }
-        
-        [DataMember]
-        public long CustomerId { get; private set; }
-        
-        [DataMember]
-        public long ShopId { get; private set; }
-        
-        [DataMember]
-        public long GoodId { get; private set;}
-        
-        [DataMember]
-        public int GoodAmount { get; private set;}
-        
-        [DataMember]
-        public double GoodCost { get; private set;}
+        [DataMember] public long Id { get; private set; }
+
+        [DataMember] public long CustomerId { get; private set; }
+
+        [DataMember] public long ShopId { get; private set; }
+
+        [DataMember] public long GoodId { get; private set; }
+
+        [DataMember] public int GoodAmount { get; private set; }
+
+        [DataMember] public double GoodCost { get; private set; }
 
         public Order(long id, long customerId, long shopId, long goodId,
             int goodAmount, double goodCost)

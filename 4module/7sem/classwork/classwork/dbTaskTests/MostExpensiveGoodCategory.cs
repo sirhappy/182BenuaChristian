@@ -12,10 +12,7 @@ namespace dbTaskTests
         public void SetUp()
         {
             _assembly = new CoreAssembly();
-            ShopFactory.ResetIdsForTests();
-            OrderFactory.ResetIdsForTests();
-            CustomerFactory.ResetIdsForTests();
-            GoodFactory.ResetIdsForTests();
+            CoreAssembly.PrepareForTest();
         }
 
         public void Clear()
@@ -32,16 +29,16 @@ namespace dbTaskTests
 
             _assembly.MyDataBase.InsertInto<Customer>(new CustomerFactory("name1", "lastname1", "address1", "district1",
                 "city1", "country1", "postalIndex1"));
-            
+
             _assembly.MyDataBase.InsertInto<Shop>(new ShopFactory("shop1", "city1", "country1", "phone1"));
-            
+
             _assembly.MyDataBase.InsertInto<Good>(new GoodFactory("good1", "desc1", "cat1"));
             _assembly.MyDataBase.InsertInto<Good>(new GoodFactory("good2", "desc2", "cat2"));
             _assembly.MyDataBase.InsertInto<Good>(new GoodFactory("good3", "desc3", "cat3"));
-            
+
             _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 0, 0, 10, 20));
             _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 0, 1, 11, 19));
-            _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0,0,2,12, 17));
+            _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 0, 2, 12, 17));
         }
 
         [Test]
@@ -49,8 +46,9 @@ namespace dbTaskTests
         {
             Clear();
             FillDummy();
-
-            var result = _assembly.RequestsFactory.MostExpensiveGoodCategory(_assembly.MyDataBase);
+            string result = null;
+            Assert.DoesNotThrow(
+                () => result = _assembly.RequestsFactory.MostExpensiveGoodCategory(_assembly.MyDataBase));
             Assert.AreEqual(result, "cat1");
         }
     }

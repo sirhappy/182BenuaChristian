@@ -1,3 +1,4 @@
+using System;
 using dbTask;
 using NUnit.Framework;
 
@@ -12,10 +13,7 @@ namespace dbTaskTests
         public void SetUp()
         {
             _assembly = new CoreAssembly();
-            ShopFactory.ResetIdsForTests();
-            OrderFactory.ResetIdsForTests();
-            CustomerFactory.ResetIdsForTests();
-            GoodFactory.ResetIdsForTests();
+            CoreAssembly.PrepareForTest();
         }
 
         public void Clear()
@@ -29,15 +27,15 @@ namespace dbTaskTests
             _assembly.MyDataBase.CreateTable<Order>();
             _assembly.MyDataBase.CreateTable<Good>();
             _assembly.MyDataBase.CreateTable<Customer>();
-            
+
             _assembly.MyDataBase.InsertInto<Shop>(new ShopFactory("shop1", "city1", "country1", "phone1"));
             _assembly.MyDataBase.InsertInto<Shop>(new ShopFactory("shop2", "city2", "country1", "phone2"));
 
             _assembly.MyDataBase.InsertInto<Customer>(new CustomerFactory("name1", "lastname1", "address1", "district1",
                 "city1", "country1", "phone1"));
-            
+
             _assembly.MyDataBase.InsertInto<Good>(new GoodFactory("good1", "desc", "cat1"));
-            
+
             _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 0, 0, 15, 20));
             _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 1, 0, 16, 19));
         }
@@ -48,7 +46,11 @@ namespace dbTaskTests
             Clear();
             DummyFill();
 
-            var result = _assembly.RequestsFactory.LeastSellsCity(_assembly.MyDataBase);
+            string result = null;
+            Assert.DoesNotThrow(new TestDelegate(() =>
+                result = _assembly.RequestsFactory.LeastSellsCity(_assembly.MyDataBase)));
+
+            result = _assembly.RequestsFactory.LeastSellsCity(_assembly.MyDataBase);
             Assert.AreEqual(result, "city1");
         }
     }

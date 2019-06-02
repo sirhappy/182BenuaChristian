@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace dbTask
 {
-
     public interface IRequestsFactory
     {
         IEnumerable<Good> OrdersByCustomerWithLongestName(DataBase dataBase);
@@ -22,13 +21,13 @@ namespace dbTask
         double AllOrdersSum(DataBase dataBase);
     }
 
-    public class RequestsFactory: IRequestsFactory
+    public class RequestsFactory : IRequestsFactory
     {
         public IEnumerable<Good> OrdersByCustomerWithLongestName(DataBase dataBase)
         {
             int maxNameLen = dataBase.Table<Customer>().Select(el => el.Name.Length).Max();
             var customer = dataBase.Table<Customer>().First(el => el.Name.Length == maxNameLen);
-            return dataBase.Table<Order>().Where(order => order.CustomerId == customer.Id).Select(order=>order.GoodId)
+            return dataBase.Table<Order>().Where(order => order.CustomerId == customer.Id).Select(order => order.GoodId)
                 .Select(goodId => dataBase.Table<Good>().First(el => el.Id == goodId));
         }
 
@@ -43,13 +42,18 @@ namespace dbTask
 
         public string LeastSellsCity(DataBase dataBase)
         {
-            return dataBase.Table<Order>().Select(el => new
+            return dataBase.Table<Order>().Select(el =>
                 {
-                    City = dataBase.Table<Shop>().First(shop => shop.Id == el.ShopId).City,
-                    OrderCost = el.GoodCost * el.GoodAmount
+                    var shp = dataBase.Table<Shop>().First(shop => shop.Id == el.ShopId);
+                    return new
+                    {
+                        City = shp.City,
+                        Country = shp.Country,
+                        OrderCost = el.GoodCost * el.GoodAmount
+                    };
                 })
-                .GroupBy(el => el.City)
-                .Select(el => new {City = el.Key, TotalCosts = el.Sum(orderCost => orderCost.OrderCost)})
+                .GroupBy(el => (el.City, el.Country))
+                .Select(el => new {City = el.Key.Item1, TotalCosts = el.Sum(orderCost => orderCost.OrderCost)})
                 .OrderBy(el => el.TotalCosts).First().City;
         }
 
@@ -62,7 +66,7 @@ namespace dbTask
             }).OrderByDescending(el => el.SellsCount).First().GoodId;
             return dataBase.Table<Order>().Where(order => order.GoodId == goodId).Select(order => order.CustomerId)
                 .Select(customerId => dataBase.Table<Customer>().First(customer => customer.Id == customerId))
-                .Select(customer => customer.LastName);
+                .Select(customer => customer.LastName).Distinct();
         }
 
         public int ShopsAmountInCountryWithLeastAmountOfShops(DataBase dataBase)
@@ -76,11 +80,15 @@ namespace dbTask
         {
             return dataBase.Table<Order>().Where(order =>
             {
-                var customerCity = dataBase.Table<Customer>().First(el => el.Id == order.CustomerId).City;
-                       
-                var shopCity = dataBase.Table<Shop>().First(el => el.Id == order.ShopId).City;
+                var neededCustomer = dataBase.Table<Customer>().First(el => el.Id == order.CustomerId);
+                var customerCity = neededCustomer.City;
+                var customerCountry = neededCustomer.Country;
 
-                return customerCity != shopCity;
+                var neededShop = dataBase.Table<Shop>().First(el => el.Id == order.ShopId);
+                var shopCity = neededShop.City;
+                var shopCountry = neededShop.Country;
+
+                return !(customerCity == shopCity && shopCountry == customerCountry);
             });
         }
 

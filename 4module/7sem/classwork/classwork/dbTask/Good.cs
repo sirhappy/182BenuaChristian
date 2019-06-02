@@ -3,20 +3,16 @@ using System.Runtime.Serialization;
 namespace dbTask
 {
     [DataContract]
-    public class Good: IEntity
+    public class Good : IEntity
     {
-        [DataMember]
-        public long Id { get; private set;}
-        
-        [DataMember]
-        public string Name { get; private set;}
-        
-        [DataMember]
-        public string Description { get; private set;}
-        
-        
-        [DataMember]
-        public string Category { get; private set; }
+        [DataMember] public long Id { get; private set; }
+
+        [DataMember] public string Name { get; private set; }
+
+        [DataMember] public string Description { get; private set; }
+
+
+        [DataMember] public string Category { get; private set; }
 
         public Good(long id, string name, string description, string category)
         {
