@@ -60,5 +60,19 @@ namespace dbTaskTests
 
             Assert.True(result.SequenceEqual(new long[] {0, 1}));
         }
+
+        public void FillForThrow()
+        {
+            ClearAll();
+            _assembly.MyDataBase.CreateAll();
+        }
+
+        [Test]
+        public void ThrowTest()
+        {
+            FillForThrow();
+            Assert.Throws<InvalidOperationException>(() =>
+                _assembly.RequestsFactory.OrdersByCustomerWithLongestName(_assembly.MyDataBase).ToList());
+        }
     }
 }

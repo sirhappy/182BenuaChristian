@@ -10,12 +10,15 @@ namespace dbTask
 
         public FactoryCorrectnessChecker CorrectnessChecker { get; }
 
+        public IDataBaseContentChecker DataBaseContentChecker { get; }
+
         public CoreAssembly()
         {
             SerializationFactory = new CollectionSerializationFactory();
             MyDataBase = new DataBase("MyDB", SerializationFactory);
             RequestsFactory = new RequestsFactory();
             CorrectnessChecker = new FactoryCorrectnessChecker(MyDataBase);
+            DataBaseContentChecker = new DataBaseContentChecker();
         }
 
         public static void PrepareForTest()

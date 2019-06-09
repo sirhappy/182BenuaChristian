@@ -1,3 +1,4 @@
+using System;
 using dbTask;
 using NUnit.Framework;
 
@@ -15,7 +16,13 @@ namespace dbTaskTests
             CoreAssembly.PrepareForTest();
         }
 
-        public void DummyFill()
+        private void Clear()
+        {
+            _assembly.MyDataBase.ClearAll();
+            CoreAssembly.PrepareForTest();
+        }
+
+        public double DummyFill()
         {
             _assembly.MyDataBase.CreateTable<Order>();
             double totalCost = 0;
@@ -25,11 +32,18 @@ namespace dbTaskTests
                 _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 0, 0, i, i));
             }
 
-            double result = 0;
+            return totalCost;
+        }
 
+        [Test]
+        public void TestSumOfOrders()
+        {
+            Clear();
+            double rightCost = DummyFill();
+            double result = 0;
             Assert.DoesNotThrow(() => { result = _assembly.RequestsFactory.AllOrdersSum(_assembly.MyDataBase); });
 
-            Assert.AreEqual(totalCost, result, 1e-5);
+            Assert.AreEqual(rightCost, result, 1e-5);
         }
     }
 }

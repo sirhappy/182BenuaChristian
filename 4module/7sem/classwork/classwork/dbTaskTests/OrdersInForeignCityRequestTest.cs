@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using dbTask;
@@ -17,17 +18,15 @@ namespace dbTaskTests
             CoreAssembly.PrepareForTest();
         }
 
-        public void Clear()
+        private void Clear()
         {
             _assembly.MyDataBase.ClearAll();
+            CoreAssembly.PrepareForTest();
         }
 
-        public void FillDummy()
+        private void FillDummy()
         {
-            _assembly.MyDataBase.CreateTable<Shop>();
-            _assembly.MyDataBase.CreateTable<Order>();
-            _assembly.MyDataBase.CreateTable<Customer>();
-            _assembly.MyDataBase.CreateTable<Good>();
+            _assembly.MyDataBase.CreateAll();
 
             _assembly.MyDataBase.InsertInto<Good>(new GoodFactory("good1", "desc1", "cat1"));
 
@@ -48,6 +47,29 @@ namespace dbTaskTests
             }
         }
 
+        private void FillForDiffCountrySameCity()
+        {
+            _assembly.MyDataBase.CreateAll();
+            _assembly.MyDataBase.InsertInto<Good>(new GoodFactory("good1", "desc1", "cat1"));
+
+            _assembly.MyDataBase.InsertInto<Shop>(new ShopFactory("shop1", "city1", "country1", "phone1"));
+            _assembly.MyDataBase.InsertInto<Shop>(new ShopFactory("shop2", "city1", "country2", "phone1"));
+
+            _assembly.MyDataBase.InsertInto<Customer>(new CustomerFactory("name1", "lastname1", "address1", "district1",
+                "city1", "country1", "postal1"));
+            _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 0, 0, 10, 15));
+            _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 1, 0, 10, 15));
+        }
+
+        private void FillForThrow()
+        {
+            Clear();
+            _assembly.MyDataBase.CreateAll();
+
+            _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 0, 0, 10, 15));
+            _assembly.MyDataBase.InsertInto<Order>(new OrderFactory(0, 1, 0, 10, 15));
+        }
+
         [Test]
         public void TestOrdersInForeignCity()
         {
@@ -62,6 +84,34 @@ namespace dbTaskTests
             });
 
             Assert.True(result.Select(el => el.Id).OrderBy(id => id).SequenceEqual(new long[] {1, 2}));
+        }
+
+        [Test]
+        public void TestOrdersInForeignCityWithDiffCountriesAndSameCity()
+        {
+            Clear();
+
+            _assembly.MyDataBase.CreateAll();
+
+            FillForDiffCountrySameCity();
+
+            IEnumerable<Order> result = null;
+
+            Assert.DoesNotThrow(() =>
+            {
+                result = _assembly.RequestsFactory.OrdersInForeignCity(_assembly.MyDataBase);
+            });
+
+            Assert.True(result.Select(order => order.Id).SequenceEqual(new long[] {1}));
+        }
+
+        [Test]
+        public void TestThrow()
+        {
+            FillForThrow();
+
+            Assert.Throws<DataBaseException>(() =>
+                _assembly.RequestsFactory.OrdersInForeignCity(_assembly.MyDataBase).ToList());
         }
     }
 }

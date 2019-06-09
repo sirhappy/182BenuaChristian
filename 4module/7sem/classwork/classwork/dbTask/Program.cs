@@ -124,7 +124,7 @@ namespace dbTask
             TestRequests(coreAssembly);
             Console.WriteLine();*/
             ConsoleManager manager = new ConsoleManager(coreAssembly.CorrectnessChecker, coreAssembly.MyDataBase,
-                coreAssembly.RequestsFactory);
+                coreAssembly.RequestsFactory, coreAssembly.DataBaseContentChecker);
             manager.StartSession();
         }
     }

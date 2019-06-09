@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.IO;
+using System.Linq;
 
 namespace dbTask
 {
@@ -53,16 +55,19 @@ namespace dbTask
         private FactoryCorrectnessChecker _checker;
         private readonly DataBase _dataBase;
         private readonly IRequestsFactory _requestsFactory;
+        private readonly IDataBaseContentChecker _dataBaseContentChecker;
         private int _maximumPrefixFileNameLen = 14;
         public static string _backCommand = "back";
 
         private MenuTree _menuTree;
 
-        public ConsoleManager(FactoryCorrectnessChecker checker, DataBase dataBase, IRequestsFactory requestsFactory)
+        public ConsoleManager(FactoryCorrectnessChecker checker, DataBase dataBase, IRequestsFactory requestsFactory,
+            IDataBaseContentChecker dataBaseContentChecker)
         {
             _checker = checker;
             _dataBase = dataBase;
             _requestsFactory = requestsFactory;
+            _dataBaseContentChecker = dataBaseContentChecker;
             ConstructTree();
         }
 
@@ -91,15 +96,17 @@ namespace dbTask
             MenuTreeNode saveShopsToJson = null;
             MenuTreeNode saveCustomersToJson = null;
             MenuTreeNode saveGoodsToJson = null;
+            MenuTreeNode loadFromFilesNode = null;
 
             MenuTreeNode rootNode = null;
 
             {
-                string nodeMenu = "1.Create Entities\n2.Save To Json\n3. Requests";
+                string nodeMenu = "1.Create Entities\n2.Save To Json\n3.Load From Json\n4. Requests";
                 Dictionary<int, Func<MenuTreeNode>> actions = new Dictionary<int, Func<MenuTreeNode>>();
                 actions[1] = () => createEntitiesNode;
                 actions[2] = () => saveToJsonNode;
-                actions[3] = () => requestsNode;
+                actions[3] = () => loadFromFilesNode;
+                actions[4] = () => requestsNode;
                 rootNode = new MenuTreeNode(null, actions, nodeMenu, null);
             }
 
@@ -110,56 +117,80 @@ namespace dbTask
                 Dictionary<int, Func<MenuTreeNode>> actions = new Dictionary<int, Func<MenuTreeNode>>();
                 actions[1] = () =>
                 {
-                    foreach (var lastName in _requestsFactory.OrdersByCustomerWithLongestName(_dataBase))
+                    TryCatchWrapper.LinqRequestWrapper(() =>
                     {
-                        Console.WriteLine(lastName);
-                    }
+                        foreach (var lastName in _requestsFactory.OrdersByCustomerWithLongestName(_dataBase))
+                        {
+                            Console.WriteLine(lastName);
+                        }
+                    });
 
                     Console.WriteLine();
                     return null;
                 };
                 actions[2] = () =>
                 {
-                    Console.WriteLine(_requestsFactory.MostExpensiveGoodCategory(_dataBase) + "\n");
+                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    {
+                        var cat = _requestsFactory.MostExpensiveGoodCategory(_dataBase);
+                        Console.WriteLine(_requestsFactory.MostExpensiveGoodCategory(_dataBase) + "\n");
+                    });
+
                     return null;
                 };
                 actions[3] = () =>
                 {
-                    Console.WriteLine(_requestsFactory.LeastSellsCity(_dataBase));
-
+                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    {
+                        Console.WriteLine(_requestsFactory.LeastSellsCity(_dataBase));
+                    });
 
                     Console.WriteLine();
+
                     return null;
                 };
                 actions[4] = () =>
                 {
-                    foreach (var lastname in _requestsFactory.CustomersLastNameWhoBoughtMostPopularGood(_dataBase))
+                    TryCatchWrapper.LinqRequestWrapper(() =>
                     {
-                        Console.WriteLine(lastname);
-                    }
-
+                        foreach (var lastname in _requestsFactory.CustomersLastNameWhoBoughtMostPopularGood(_dataBase))
+                        {
+                            Console.WriteLine(lastname);
+                        }
+                    });
                     Console.WriteLine();
                     return null;
                 };
                 actions[5] = () =>
                 {
-                    Console.WriteLine(_requestsFactory.ShopsAmountInCountryWithLeastAmountOfShops(_dataBase));
+                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    {
+                        Console.WriteLine(_requestsFactory.ShopsAmountInCountryWithLeastAmountOfShops(_dataBase));
+                    });
+
                     Console.WriteLine();
                     return null;
                 };
                 actions[6] = () =>
                 {
-                    foreach (var order in _requestsFactory.OrdersInForeignCity(_dataBase))
+                    TryCatchWrapper.LinqRequestWrapper(() =>
                     {
-                        Console.WriteLine(order);
-                    }
-
+                        foreach (var order in _requestsFactory.OrdersInForeignCity(_dataBase))
+                        {
+                            Console.WriteLine(order);
+                        }
+                    });
                     Console.WriteLine();
+
                     return null;
                 };
                 actions[7] = () =>
                 {
-                    Console.WriteLine(_requestsFactory.AllOrdersSum(_dataBase).ToString("F3"));
+                    TryCatchWrapper.LinqRequestWrapper(() =>
+                        {
+                            Console.WriteLine(_requestsFactory.AllOrdersSum(_dataBase).ToString("F3"));
+                        }
+                    );
                     return null;
                 };
                 actions[8] = () => { return rootNode; };
@@ -180,23 +211,26 @@ namespace dbTask
                 string nodeMenu = OrderFactory.ConsolePrompt;
                 Action action = () =>
                 {
-                    Console.WriteLine(nodeMenu);
-                    OrderFactory factory = null;
-                    string entered = null;
-                    while (!(OrderFactory.TryParse(entered = Console.ReadLine(), out factory) &&
-                             _checker.IsValid<OrderFactory, Order>(factory)))
+                    TryCatchWrapper.InsertIntoDbRequestWrapper(() =>
                     {
-                        if (entered?.ToLower() == _backCommand)
+                        Console.WriteLine(nodeMenu);
+                        OrderFactory factory = null;
+                        string entered = null;
+                        while (!(OrderFactory.TryParse(entered = Console.ReadLine(), out factory) &&
+                                 _checker.IsValid<OrderFactory, Order>(factory)))
                         {
-                            return;
+                            if (entered?.ToLower() == _backCommand)
+                            {
+                                return;
+                            }
+
+                            Console.WriteLine("Something went wrong, reenter pls");
+                            Console.WriteLine("Bad format, too big names");
+                            Console.WriteLine("Make sure following shop, customer and good exists");
                         }
 
-                        Console.WriteLine("Something went wrong, reenter pls");
-                        Console.WriteLine("Bad format, too big names");
-                        Console.WriteLine("Make sure following shop, customer and good exists");
-                    }
-
-                    _dataBase.InsertInto<Order>(factory);
+                        _dataBase.InsertInto<Order>(factory);
+                    });
                 };
                 createOrderNode = new MenuTreeNode(createEntitiesNode, null, nodeMenu, action);
             }
@@ -205,23 +239,26 @@ namespace dbTask
                 string nodeMenu = ShopFactory.ConsolePrompt;
                 Action action = () =>
                 {
-                    Console.WriteLine(nodeMenu);
-
-                    ShopFactory factory = null;
-                    string entered = null;
-                    while (!(ShopFactory.TryParse(entered = Console.ReadLine(), out factory) &&
-                             _checker.IsValid<ShopFactory, Shop>(factory)))
+                    TryCatchWrapper.InsertIntoDbRequestWrapper(() =>
                     {
-                        if (entered?.ToLower() == _backCommand)
+                        Console.WriteLine(nodeMenu);
+
+                        ShopFactory factory = null;
+                        string entered = null;
+                        while (!(ShopFactory.TryParse(entered = Console.ReadLine(), out factory) &&
+                                 _checker.IsValid<ShopFactory, Shop>(factory)))
                         {
-                            return;
+                            if (entered?.ToLower() == _backCommand)
+                            {
+                                return;
+                            }
+
+                            Console.WriteLine("Something went wrong, reenter pls");
+                            Console.WriteLine("Bad format, too big names");
                         }
 
-                        Console.WriteLine("Something went wrong, reenter pls");
-                        Console.WriteLine("Bad format, too big names");
-                    }
-
-                    _dataBase.InsertInto<Shop>(factory);
+                        _dataBase.InsertInto<Shop>(factory);
+                    });
                 };
                 createShopNode = new MenuTreeNode(createEntitiesNode, null, nodeMenu, action);
             }
@@ -230,23 +267,26 @@ namespace dbTask
                 string nodeMenu = CustomerFactory.ConsolePrompt;
                 Action action = () =>
                 {
-                    Console.WriteLine(nodeMenu);
-
-                    CustomerFactory factory = null;
-                    string entered = null;
-                    while (!(CustomerFactory.TryParse(entered = Console.ReadLine(), out factory) &&
-                             _checker.IsValid<CustomerFactory, Customer>(factory)))
+                    TryCatchWrapper.InsertIntoDbRequestWrapper(() =>
                     {
-                        if (entered?.ToLower() == _backCommand)
+                        Console.WriteLine(nodeMenu);
+
+                        CustomerFactory factory = null;
+                        string entered = null;
+                        while (!(CustomerFactory.TryParse(entered = Console.ReadLine(), out factory) &&
+                                 _checker.IsValid<CustomerFactory, Customer>(factory)))
                         {
-                            return;
+                            if (entered?.ToLower() == _backCommand)
+                            {
+                                return;
+                            }
+
+                            Console.WriteLine("Something went wrong, reenter pls");
+                            Console.WriteLine("Bad format, too big names");
                         }
 
-                        Console.WriteLine("Something went wrong, reenter pls");
-                        Console.WriteLine("Bad format, too big names");
-                    }
-
-                    _dataBase.InsertInto<Customer>(factory);
+                        _dataBase.InsertInto<Customer>(factory);
+                    });
                 };
                 createCustomerNode = new MenuTreeNode(createEntitiesNode, null, nodeMenu, action);
             }
@@ -255,23 +295,26 @@ namespace dbTask
                 string nodeMenu = GoodFactory.ConsolePrompt;
                 Action action = () =>
                 {
-                    Console.WriteLine(nodeMenu);
-
-                    GoodFactory factory = null;
-                    string entered = null;
-                    while (!(GoodFactory.TryParse(entered = Console.ReadLine(), out factory) &&
-                             _checker.IsValid<GoodFactory, Good>(factory)))
+                    TryCatchWrapper.InsertIntoDbRequestWrapper(() =>
                     {
-                        if (entered?.ToLower() == _backCommand)
+                        Console.WriteLine(nodeMenu);
+
+                        GoodFactory factory = null;
+                        string entered = null;
+                        while (!(GoodFactory.TryParse(entered = Console.ReadLine(), out factory) &&
+                                 _checker.IsValid<GoodFactory, Good>(factory)))
                         {
-                            return;
+                            if (entered?.ToLower() == _backCommand)
+                            {
+                                return;
+                            }
+
+                            Console.WriteLine("Something went wrong, reenter pls");
+                            Console.WriteLine("Bad format, too big names");
                         }
 
-                        Console.WriteLine("Something went wrong, reenter pls");
-                        Console.WriteLine("Bad format, too big names");
-                    }
-
-                    _dataBase.InsertInto<Good>(factory);
+                        _dataBase.InsertInto<Good>(factory);
+                    });
                 };
                 createGoodNode = new MenuTreeNode(createEntitiesNode, null, nodeMenu, action);
             }
@@ -292,28 +335,23 @@ namespace dbTask
                 string nodeMenu = "Enter fileName prefix. File will be save as DBOrder{prefix}.json";
                 Action action = () =>
                 {
-                    Console.WriteLine(nodeMenu);
-
-                    string prefix = null;
-                    while (!((prefix = Console.ReadLine()).Length <= _maximumPrefixFileNameLen))
+                    TryCatchWrapper.SerializationRequestWrapper(() =>
                     {
-                        if (prefix?.ToLower() == _backCommand)
+                        Console.WriteLine(nodeMenu);
+
+                        string prefix = null;
+                        while (!((prefix = Console.ReadLine()).Length <= _maximumPrefixFileNameLen))
                         {
-                            return;
+                            if (prefix?.ToLower() == _backCommand)
+                            {
+                                return;
+                            }
+
+                            Console.WriteLine("Too big prefix");
                         }
 
-                        Console.WriteLine("Too big prefix");
-                    }
-
-                    try
-                    {
                         _dataBase.Serialize<Order>(prefix);
-                    }
-                    catch (IOException exception)
-                    {
-                        Console.WriteLine("Cant save because of:");
-                        Console.WriteLine(exception.Message);
-                    }
+                    });
                 };
                 saveOrdersToJson = new MenuTreeNode(saveToJsonNode, null, nodeMenu, action);
             }
@@ -322,28 +360,23 @@ namespace dbTask
                 string nodeMenu = "Enter fileName prefix. File will be save as DBShop{prefix}.json";
                 Action action = () =>
                 {
-                    Console.WriteLine(nodeMenu);
-
-                    string prefix = null;
-                    while (!((prefix = Console.ReadLine()).Length <= _maximumPrefixFileNameLen))
+                    TryCatchWrapper.SerializationRequestWrapper(() =>
                     {
-                        if (prefix?.ToLower() == _backCommand)
+                        Console.WriteLine(nodeMenu);
+
+                        string prefix = null;
+                        while (!((prefix = Console.ReadLine()).Length <= _maximumPrefixFileNameLen))
                         {
-                            return;
+                            if (prefix?.ToLower() == _backCommand)
+                            {
+                                return;
+                            }
+
+                            Console.WriteLine("Too big prefix");
                         }
 
-                        Console.WriteLine("Too big prefix");
-                    }
-
-                    try
-                    {
                         _dataBase.Serialize<Shop>(prefix);
-                    }
-                    catch (IOException exception)
-                    {
-                        Console.WriteLine("Cant save because of:");
-                        Console.WriteLine(exception.Message);
-                    }
+                    });
                 };
                 saveShopsToJson = new MenuTreeNode(saveToJsonNode, null, nodeMenu, action);
             }
@@ -352,28 +385,23 @@ namespace dbTask
                 string nodeMenu = "Enter fileName prefix. File will be save as DBCustomer{prefix}.json";
                 Action action = () =>
                 {
-                    Console.WriteLine(nodeMenu);
-
-                    string prefix = null;
-                    while (!((prefix = Console.ReadLine()).Length <= _maximumPrefixFileNameLen))
+                    TryCatchWrapper.SerializationRequestWrapper(() =>
                     {
-                        if (prefix?.ToLower() == _backCommand)
+                        Console.WriteLine(nodeMenu);
+
+                        string prefix = null;
+                        while (!((prefix = Console.ReadLine()).Length <= _maximumPrefixFileNameLen))
                         {
-                            return;
+                            if (prefix?.ToLower() == _backCommand)
+                            {
+                                return;
+                            }
+
+                            Console.WriteLine("Too big prefix");
                         }
 
-                        Console.WriteLine("Too big prefix");
-                    }
-
-                    try
-                    {
                         _dataBase.Serialize<Customer>(prefix);
-                    }
-                    catch (IOException exception)
-                    {
-                        Console.WriteLine("Cant save because of:");
-                        Console.WriteLine(exception.Message);
-                    }
+                    });
                 };
                 saveCustomersToJson = new MenuTreeNode(saveToJsonNode, null, nodeMenu, action);
             }
@@ -382,30 +410,88 @@ namespace dbTask
                 string nodeMenu = "Enter fileName prefix. File will be save as DBGood{prefix}.json";
                 Action action = () =>
                 {
-                    Console.WriteLine(nodeMenu);
-
-                    string prefix = null;
-                    while (!((prefix = Console.ReadLine()).Length <= _maximumPrefixFileNameLen))
+                    TryCatchWrapper.SerializationRequestWrapper(() =>
                     {
-                        if (prefix?.ToLower() == _backCommand)
+                        Console.WriteLine(nodeMenu);
+
+                        string prefix = null;
+                        while (!((prefix = Console.ReadLine()).Length <= _maximumPrefixFileNameLen))
                         {
-                            return;
+                            if (prefix?.ToLower() == _backCommand)
+                            {
+                                return;
+                            }
+
+                            Console.WriteLine("Too big prefix");
                         }
 
-                        Console.WriteLine("Too big prefix");
-                    }
-
-                    try
-                    {
                         _dataBase.Serialize<Good>(prefix);
-                    }
-                    catch (IOException exception)
-                    {
-                        Console.WriteLine("Cant save because of:");
-                        Console.WriteLine(exception.Message);
-                    }
+                    });
                 };
                 saveGoodsToJson = new MenuTreeNode(saveToJsonNode, null, nodeMenu, action);
+            }
+
+            {
+                string nodeMenu = "Enter 4 files: {Customers}.json;{Shops}.json;{Orders}.json;{Goods}.json";
+
+                void Action()
+                {
+                    Console.WriteLine(nodeMenu);
+                    var line = Console.ReadLine();
+                    var input = line?.Split(new[] {';'}).AsEnumerable() ?? new List<string>();
+                    if (line == _backCommand)
+                    {
+                        return;
+                    }
+
+                    input = input.Select(el => el.Trim());
+
+                    if (input.Count() != 4)
+                    {
+                        Console.WriteLine("Wrong format");
+                        return;
+                    }
+
+                    if (input.Any(el =>
+                    {
+                        var splitted = el.Split(new char[] {'.'});
+                        if (splitted.Length <= 1)
+                        {
+                            return true;
+                        }
+
+                        if (splitted.Last() != "json")
+                        {
+                            return true;
+                        }
+
+                        return false;
+                    }))
+                    {
+                        Console.WriteLine("Wrong format");
+                    }
+
+                    TryCatchWrapper.DeserializationWrapper(() =>
+                    {
+                        var _prevVersion = (DataBase) _dataBase.Clone();
+                        _dataBase.RestoreDataTable<Customer>("", input.ElementAt(0));
+                        _dataBase.RestoreDataTable<Shop>("", input.ElementAt(1));
+                        _dataBase.RestoreDataTable<Order>("", input.ElementAt(2));
+                        _dataBase.RestoreDataTable<Good>("", input.ElementAt(3));
+
+                        if (!_dataBaseContentChecker.IsValid(_dataBase))
+                        {
+                            Console.WriteLine("Database content is invalid, continue(y/n)");
+                            string choice = Console.ReadLine().Trim();
+                            if (choice == "n")
+                            {
+                                _dataBase.RollBack(_prevVersion);
+                            }
+                        }
+                    });
+                }
+
+                loadFromFilesNode = new MenuTreeNode(rootNode, null, nodeMenu, Action);
             }
             _menuTree = new MenuTree(rootNode);
         }

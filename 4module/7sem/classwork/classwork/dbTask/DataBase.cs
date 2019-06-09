@@ -5,8 +5,7 @@ using System.Linq;
 
 namespace dbTask
 {
-    
-    public class DataBase
+    public class DataBase : ICloneable
     {
         private readonly IDictionary<Type, List<IEntity>> _tables;
 
@@ -26,7 +25,7 @@ namespace dbTask
             {
                 throw new DataBaseException();
             }
-            
+
             _tables[typeof(T)] = new List<IEntity>();
         }
 
@@ -38,7 +37,12 @@ namespace dbTask
             }
         }
 
-        public void FillTable<T>(IEnumerable<IEntity> data)
+        private void ClearTable<T>()
+        {
+            _tables[typeof(T)].Clear();
+        }
+
+        private void FillTable<T>(IEnumerable<IEntity> data)
         {
             _tables[typeof(T)].AddRange(data);
         }
@@ -52,7 +56,7 @@ namespace dbTask
 
             (_tables[tableType]).Add(factory.Instance);
         }
-        
+
         public IEnumerable<T> Table<T>() where T : IEntity
         {
             Type tableType = typeof(T);
@@ -65,14 +69,16 @@ namespace dbTask
 
         public void Serialize<T>(string prefix = "", string fileName = null) where T : IEntity
         {
-            fileName = fileName ?? "../../DB" + typeof(T).Name.Split('.').Last() + prefix + ".json";
-            _serializationFactory.CollectionSerializer<T>().Serializer.Serialize(fileName, _tables[typeof(T)].Cast<T>());
+            fileName = "../../" + (fileName ?? "DB" + typeof(T).Name.Split('.').Last() + prefix + ".json");
+            _serializationFactory.CollectionSerializer<T>().Serializer
+                .Serialize(fileName, _tables[typeof(T)].Cast<T>());
         }
 
         public void RestoreDataTable<T>(string prefix = "", string fileName = null) where T : IEntity
         {
             this.CreateTableNoThrow<T>();
-            fileName = fileName ?? "../../DB" + typeof(T).Name.Split('.').Last() + prefix + ".json";
+            fileName = "../../" + (fileName ?? "DB" + typeof(T).Name.Split('.').Last() + prefix + ".json");
+            ClearTable<T>();
             FillTable<T>(this._serializationFactory.CollectionSerializer<T>().Deserialize(fileName).Cast<IEntity>());
         }
 
@@ -80,10 +86,40 @@ namespace dbTask
         {
             _tables.Remove(typeof(T));
         }
-        
+
         public void ClearAll()
         {
             _tables.Clear();
+        }
+
+        public void CreateAll()
+        {
+            this.CreateTableNoThrow<Shop>();
+            this.CreateTableNoThrow<Order>();
+            this.CreateTableNoThrow<Customer>();
+            this.CreateTableNoThrow<Good>();
+        }
+
+        public void RollBack(DataBase checkPoint)
+        {
+            this.ClearAll();
+            this.CreateAll();
+            foreach (var el in checkPoint._tables)
+            {
+                this._tables[el.Key].AddRange(el.Value);
+            }
+        }
+
+        public object Clone()
+        {
+            var dataBase = new DataBase("MyDB", this._serializationFactory);
+            dataBase.CreateAll();
+            foreach (var el in this._tables)
+            {
+                dataBase._tables[el.Key].AddRange(el.Value);
+            }
+
+            return dataBase;
         }
     }
 }
