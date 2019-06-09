@@ -5,9 +5,16 @@ using System.Runtime.Serialization;
 
 namespace dbTask
 {
+    /// <summary>
+    /// Try catch wrapper.
+    /// </summary>
     public static class TryCatchWrapper
     {
-        public static void LinqRequestWrapper(Action action)
+        /// <summary>
+        /// Wraps the linq request.
+        /// </summary>
+        /// <param name="action">Action.</param>
+        public static void WrapLinqRequest(Action action)
         {
             try
             {
@@ -27,7 +34,11 @@ namespace dbTask
             }
         }
 
-        public static void SerializationRequestWrapper(Action action)
+        /// <summary>
+        /// Wraps the serialization request.
+        /// </summary>
+        /// <param name="action">Action.</param>
+        public static void WrapSerializationRequest(Action action)
         {
             try
             {
@@ -43,7 +54,11 @@ namespace dbTask
             }
         }
 
-        public static void DeserializationWrapper(Action action)
+        /// <summary>
+        /// Wraps the deserialization request.
+        /// </summary>
+        /// <param name="action">Action.</param>
+        public static void WrapDeserializationRequest(Action action)
         {
             try
             {
@@ -63,7 +78,11 @@ namespace dbTask
             }
         }
 
-        public static void InsertIntoDbRequestWrapper(Action action)
+        /// <summary>
+        /// Wraps the insert into db request.
+        /// </summary>
+        /// <param name="action">Action.</param>
+        public static void WrapInsertIntoDbRequest(Action action)
         {
             try
             {

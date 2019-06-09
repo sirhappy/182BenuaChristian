@@ -48,7 +48,7 @@ namespace dbTaskTests
             FillDummy();
             string result = null;
             Assert.DoesNotThrow(
-                () => result = _assembly.RequestsFactory.MostExpensiveGoodCategory(_assembly.MyDataBase));
+                () => result = _assembly.RequestsFactory.GetMostExpensiveGoodCategory(_assembly.MyDataBase));
             Assert.AreEqual(result, "cat1");
         }
     }

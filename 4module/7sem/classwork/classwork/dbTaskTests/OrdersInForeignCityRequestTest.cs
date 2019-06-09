@@ -80,7 +80,7 @@ namespace dbTaskTests
 
             Assert.DoesNotThrow(() =>
             {
-                result = _assembly.RequestsFactory.OrdersInForeignCity(_assembly.MyDataBase);
+                result = _assembly.RequestsFactory.GetOrdersInForeignCity(_assembly.MyDataBase);
             });
 
             Assert.True(result.Select(el => el.Id).OrderBy(id => id).SequenceEqual(new long[] {1, 2}));
@@ -99,7 +99,7 @@ namespace dbTaskTests
 
             Assert.DoesNotThrow(() =>
             {
-                result = _assembly.RequestsFactory.OrdersInForeignCity(_assembly.MyDataBase);
+                result = _assembly.RequestsFactory.GetOrdersInForeignCity(_assembly.MyDataBase);
             });
 
             Assert.True(result.Select(order => order.Id).SequenceEqual(new long[] {1}));
@@ -111,7 +111,7 @@ namespace dbTaskTests
             FillForThrow();
 
             Assert.Throws<DataBaseException>(() =>
-                _assembly.RequestsFactory.OrdersInForeignCity(_assembly.MyDataBase).ToList());
+                _assembly.RequestsFactory.GetOrdersInForeignCity(_assembly.MyDataBase).ToList());
         }
     }
 }

@@ -53,7 +53,7 @@ namespace dbTaskTests
             FillDummy();
             IOrderedEnumerable<long> result = null;
             Assert.DoesNotThrow(() => result = _assembly.RequestsFactory
-                .OrdersByCustomerWithLongestName(_assembly.MyDataBase)
+                .GetOrdersByCustomerWithLongestName(_assembly.MyDataBase)
                 .Select(el => el.Id).OrderBy(el => el));
 
             result.ToList().ForEach(Console.WriteLine);
@@ -72,7 +72,7 @@ namespace dbTaskTests
         {
             FillForThrow();
             Assert.Throws<InvalidOperationException>(() =>
-                _assembly.RequestsFactory.OrdersByCustomerWithLongestName(_assembly.MyDataBase).ToList());
+                _assembly.RequestsFactory.GetOrdersByCustomerWithLongestName(_assembly.MyDataBase).ToList());
         }
     }
 }

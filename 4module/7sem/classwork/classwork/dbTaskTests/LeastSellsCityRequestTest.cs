@@ -48,9 +48,9 @@ namespace dbTaskTests
 
             string result = null;
             Assert.DoesNotThrow(new TestDelegate(() =>
-                result = _assembly.RequestsFactory.LeastSellsCity(_assembly.MyDataBase)));
+                result = _assembly.RequestsFactory.GetLeastSellsCity(_assembly.MyDataBase)));
 
-            result = _assembly.RequestsFactory.LeastSellsCity(_assembly.MyDataBase);
+            result = _assembly.RequestsFactory.GetLeastSellsCity(_assembly.MyDataBase);
             Assert.AreEqual(result, "city1");
         }
     }

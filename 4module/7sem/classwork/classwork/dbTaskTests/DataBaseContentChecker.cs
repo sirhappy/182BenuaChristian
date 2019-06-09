@@ -30,6 +30,7 @@ namespace dbTaskTests
 
         private void FillCorrect()
         {
+            Clear();
             FillIncorrect();
 
             _assembly.MyDataBase.InsertInto<Customer>(new CustomerFactory("man1", "lastname1", "address1", "district1",

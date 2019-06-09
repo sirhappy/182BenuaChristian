@@ -41,7 +41,8 @@ namespace dbTaskTests
 
             Assert.DoesNotThrow(() =>
             {
-                result = _assembly.RequestsFactory.ShopsAmountInCountryWithLeastAmountOfShops(_assembly.MyDataBase);
+                result =
+                    _assembly.RequestsFactory.GetShopsAmountInCountryWithLeastAmountOfShops(_assembly.MyDataBase);
             });
             Assert.AreEqual(result, 3);
         }

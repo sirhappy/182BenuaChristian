@@ -7,13 +7,42 @@ using System.Linq;
 
 namespace dbTask
 {
+    /// <summary>
+    /// Menu tree node.
+    /// </summary>
     public class MenuTreeNode
     {
+        /// <summary>
+        /// Gets the node's parent.
+        /// </summary>
+        /// <value>The parent.</value>
         public MenuTreeNode Parent { get; }
+
+        /// <summary>
+        /// Gets the prompt action.
+        /// </summary>
+        /// <value>The prompt action.</value>
         public Action OnPromptAction { get; }
+
+        /// <summary>
+        /// Gets the decisions.
+        /// </summary>
+        /// <value>The decisions.</value>
         public IDictionary<int, Func<MenuTreeNode>> Decisions { get; }
+
+        /// <summary>
+        /// Gets the node menu.
+        /// </summary>
+        /// <value>The node menu.</value>
         public string NodeMenu { get; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:dbTask.MenuTreeNode"/> class.
+        /// </summary>
+        /// <param name="parent">Parent.</param>
+        /// <param name="decisions">Decisions.</param>
+        /// <param name="nodeMenu">Node menu.</param>
+        /// <param name="onPromptAction">On prompt action.</param>
         public MenuTreeNode(MenuTreeNode parent, IDictionary<int, Func<MenuTreeNode>> decisions, string nodeMenu,
             Action onPromptAction = null)
         {
@@ -24,18 +53,32 @@ namespace dbTask
         }
     }
 
+    /// <summary>
+    /// Menu tree.
+    /// </summary>
     public class MenuTree
     {
+        /// <summary>
+        /// Gets the root.
+        /// </summary>
+        /// <value>The root.</value>
         public MenuTreeNode Root { get; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:dbTask.MenuTree"/> class.
+        /// </summary>
+        /// <param name="root">Root.</param>
         public MenuTree(MenuTreeNode root)
         {
             Root = root;
         }
 
+        /// <summary>
+        /// Begins the tree traversing.
+        /// </summary>
+        /// <param name="node">Node.</param>
         public void BeginTreeTraversing(MenuTreeNode node)
         {
-            //Console.WriteLine(node.NodeMenu);
             node.OnPromptAction();
             if (!(node.Decisions is null))
             {
@@ -50,17 +93,53 @@ namespace dbTask
         }
     }
 
+    /// <summary>
+    /// Console manager.
+    /// </summary>
     public class ConsoleManager
     {
+        /// <summary>
+        /// The factory correctness checker.
+        /// </summary>
         private FactoryCorrectnessChecker _checker;
+
+        /// <summary>
+        /// The data base.
+        /// </summary>
         private readonly DataBase _dataBase;
+
+        /// <summary>
+        /// The requests factory.
+        /// </summary>
         private readonly IRequestsFactory _requestsFactory;
+
+        /// <summary>
+        /// The data base content checker.
+        /// </summary>
         private readonly IDataBaseContentChecker _dataBaseContentChecker;
+
+        /// <summary>
+        /// The maximum length of the prefix file name.
+        /// </summary>
         private int _maximumPrefixFileNameLen = 14;
+
+        /// <summary>
+        /// The back command.
+        /// </summary>
         public static string _backCommand = "back";
 
+        /// <summary>
+        /// The menu tree.
+        /// </summary>
         private MenuTree _menuTree;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:dbTask.ConsoleManager"/> class.
+        /// </summary>
+        /// <param name="checker">Checker.</param>
+        /// <param name="dataBase">Data base.</param>
+        /// <param name="requestsFactory">Requests factory.</param>
+        /// <param name="dataBaseContentChecker">Data base content checker.</param>
         public ConsoleManager(FactoryCorrectnessChecker checker, DataBase dataBase, IRequestsFactory requestsFactory,
             IDataBaseContentChecker dataBaseContentChecker)
         {
@@ -71,6 +150,9 @@ namespace dbTask
             ConstructTree();
         }
 
+        /// <summary>
+        /// Starts the session.
+        /// </summary>
         public void StartSession()
         {
             Console.WriteLine("In creating entities, saving file use command \"Back\" to cancel");
@@ -81,6 +163,9 @@ namespace dbTask
             _menuTree.BeginTreeTraversing(_menuTree.Root);
         }
 
+        /// <summary>
+        /// Constructs the tree.
+        /// </summary>
         public void ConstructTree()
         {
             MenuTreeNode createEntitiesNode = null;
@@ -117,9 +202,9 @@ namespace dbTask
                 Dictionary<int, Func<MenuTreeNode>> actions = new Dictionary<int, Func<MenuTreeNode>>();
                 actions[1] = () =>
                 {
-                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    TryCatchWrapper.WrapLinqRequest(() =>
                     {
-                        foreach (var lastName in _requestsFactory.OrdersByCustomerWithLongestName(_dataBase))
+                        foreach (var lastName in _requestsFactory.GetOrdersByCustomerWithLongestName(_dataBase))
                         {
                             Console.WriteLine(lastName);
                         }
@@ -130,19 +215,19 @@ namespace dbTask
                 };
                 actions[2] = () =>
                 {
-                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    TryCatchWrapper.WrapLinqRequest(() =>
                     {
-                        var cat = _requestsFactory.MostExpensiveGoodCategory(_dataBase);
-                        Console.WriteLine(_requestsFactory.MostExpensiveGoodCategory(_dataBase) + "\n");
+                        var cat = _requestsFactory.GetMostExpensiveGoodCategory(_dataBase);
+                        Console.WriteLine(_requestsFactory.GetMostExpensiveGoodCategory(_dataBase) + "\n");
                     });
 
                     return null;
                 };
                 actions[3] = () =>
                 {
-                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    TryCatchWrapper.WrapLinqRequest(() =>
                     {
-                        Console.WriteLine(_requestsFactory.LeastSellsCity(_dataBase));
+                        Console.WriteLine(_requestsFactory.GetLeastSellsCity(_dataBase));
                     });
 
                     Console.WriteLine();
@@ -151,9 +236,10 @@ namespace dbTask
                 };
                 actions[4] = () =>
                 {
-                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    TryCatchWrapper.WrapLinqRequest(() =>
                     {
-                        foreach (var lastname in _requestsFactory.CustomersLastNameWhoBoughtMostPopularGood(_dataBase))
+                        foreach (var lastname in _requestsFactory.GetCustomersLastNameWhoBoughtMostPopularGood(
+                            _dataBase))
                         {
                             Console.WriteLine(lastname);
                         }
@@ -163,9 +249,10 @@ namespace dbTask
                 };
                 actions[5] = () =>
                 {
-                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    TryCatchWrapper.WrapLinqRequest(() =>
                     {
-                        Console.WriteLine(_requestsFactory.ShopsAmountInCountryWithLeastAmountOfShops(_dataBase));
+                        Console.WriteLine(
+                            _requestsFactory.GetShopsAmountInCountryWithLeastAmountOfShops(_dataBase));
                     });
 
                     Console.WriteLine();
@@ -173,9 +260,9 @@ namespace dbTask
                 };
                 actions[6] = () =>
                 {
-                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    TryCatchWrapper.WrapLinqRequest(() =>
                     {
-                        foreach (var order in _requestsFactory.OrdersInForeignCity(_dataBase))
+                        foreach (var order in _requestsFactory.GetOrdersInForeignCity(_dataBase))
                         {
                             Console.WriteLine(order);
                         }
@@ -186,9 +273,9 @@ namespace dbTask
                 };
                 actions[7] = () =>
                 {
-                    TryCatchWrapper.LinqRequestWrapper(() =>
+                    TryCatchWrapper.WrapLinqRequest(() =>
                         {
-                            Console.WriteLine(_requestsFactory.AllOrdersSum(_dataBase).ToString("F3"));
+                            Console.WriteLine(_requestsFactory.GetAllOrdersSum(_dataBase).ToString("F3"));
                         }
                     );
                     return null;
@@ -211,7 +298,7 @@ namespace dbTask
                 string nodeMenu = OrderFactory.ConsolePrompt;
                 Action action = () =>
                 {
-                    TryCatchWrapper.InsertIntoDbRequestWrapper(() =>
+                    TryCatchWrapper.WrapInsertIntoDbRequest(() =>
                     {
                         Console.WriteLine(nodeMenu);
                         OrderFactory factory = null;
@@ -239,7 +326,7 @@ namespace dbTask
                 string nodeMenu = ShopFactory.ConsolePrompt;
                 Action action = () =>
                 {
-                    TryCatchWrapper.InsertIntoDbRequestWrapper(() =>
+                    TryCatchWrapper.WrapInsertIntoDbRequest(() =>
                     {
                         Console.WriteLine(nodeMenu);
 
@@ -267,7 +354,7 @@ namespace dbTask
                 string nodeMenu = CustomerFactory.ConsolePrompt;
                 Action action = () =>
                 {
-                    TryCatchWrapper.InsertIntoDbRequestWrapper(() =>
+                    TryCatchWrapper.WrapInsertIntoDbRequest(() =>
                     {
                         Console.WriteLine(nodeMenu);
 
@@ -295,7 +382,7 @@ namespace dbTask
                 string nodeMenu = GoodFactory.ConsolePrompt;
                 Action action = () =>
                 {
-                    TryCatchWrapper.InsertIntoDbRequestWrapper(() =>
+                    TryCatchWrapper.WrapInsertIntoDbRequest(() =>
                     {
                         Console.WriteLine(nodeMenu);
 
@@ -335,7 +422,7 @@ namespace dbTask
                 string nodeMenu = "Enter fileName prefix. File will be save as DBOrder{prefix}.json";
                 Action action = () =>
                 {
-                    TryCatchWrapper.SerializationRequestWrapper(() =>
+                    TryCatchWrapper.WrapSerializationRequest(() =>
                     {
                         Console.WriteLine(nodeMenu);
 
@@ -360,7 +447,7 @@ namespace dbTask
                 string nodeMenu = "Enter fileName prefix. File will be save as DBShop{prefix}.json";
                 Action action = () =>
                 {
-                    TryCatchWrapper.SerializationRequestWrapper(() =>
+                    TryCatchWrapper.WrapSerializationRequest(() =>
                     {
                         Console.WriteLine(nodeMenu);
 
@@ -385,7 +472,7 @@ namespace dbTask
                 string nodeMenu = "Enter fileName prefix. File will be save as DBCustomer{prefix}.json";
                 Action action = () =>
                 {
-                    TryCatchWrapper.SerializationRequestWrapper(() =>
+                    TryCatchWrapper.WrapSerializationRequest(() =>
                     {
                         Console.WriteLine(nodeMenu);
 
@@ -410,7 +497,7 @@ namespace dbTask
                 string nodeMenu = "Enter fileName prefix. File will be save as DBGood{prefix}.json";
                 Action action = () =>
                 {
-                    TryCatchWrapper.SerializationRequestWrapper(() =>
+                    TryCatchWrapper.WrapSerializationRequest(() =>
                     {
                         Console.WriteLine(nodeMenu);
 
@@ -471,7 +558,7 @@ namespace dbTask
                         Console.WriteLine("Wrong format");
                     }
 
-                    TryCatchWrapper.DeserializationWrapper(() =>
+                    TryCatchWrapper.WrapDeserializationRequest(() =>
                     {
                         var _prevVersion = (DataBase) _dataBase.Clone();
                         _dataBase.RestoreDataTable<Customer>("", input.ElementAt(0));

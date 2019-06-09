@@ -57,7 +57,8 @@ namespace dbTaskTests
 
             Assert.DoesNotThrow(() =>
             {
-                result = _assembly.RequestsFactory.CustomersLastNameWhoBoughtMostPopularGood(_assembly.MyDataBase);
+                result =
+                    _assembly.RequestsFactory.GetCustomersLastNameWhoBoughtMostPopularGood(_assembly.MyDataBase);
             });
 
             Assert.True(result.OrderBy(el => el).SequenceEqual(new string[] {"1", "2"}));

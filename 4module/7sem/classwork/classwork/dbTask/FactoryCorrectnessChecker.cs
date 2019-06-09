@@ -5,13 +5,35 @@ using System.Linq;
 
 namespace dbTask
 {
+    /// <summary>
+    /// Factory correctness checker.
+    /// </summary>
     public class FactoryCorrectnessChecker
     {
+        /// <summary>
+        /// The correctness rules.
+        /// </summary>
         private IDictionary<Type, Func<object, bool>> _correctnessRules;
+
+        /// <summary>
+        /// The data base.
+        /// </summary>
         private DataBase _dataBase;
+
+        /// <summary>
+        /// The length of the common max.
+        /// </summary>
         private int _commonMaxLen = 40;
+
+        /// <summary>
+        /// The length of the desc max.
+        /// </summary>
         private int _descMaxLen = 400;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:dbTask.FactoryCorrectnessChecker"/> class.
+        /// </summary>
+        /// <param name="dataBase">Data base.</param>
         public FactoryCorrectnessChecker(DataBase dataBase)
         {
             _dataBase = dataBase;
@@ -71,6 +93,13 @@ namespace dbTask
             };
         }
 
+        /// <summary>
+        /// Validates the factory.
+        /// </summary>
+        /// <returns><c>true</c>, if factory was valid, <c>false</c> otherwise.</returns>
+        /// <param name="factory">Factory.</param>
+        /// <typeparam name="T">The type of factory to be checked.</typeparam>
+        /// <typeparam name="U">The type of entity factory produces</typeparam>
         public bool IsValid<T, U>(T factory) where T : IEntityFactory<U> where U : IEntity
         {
             return _correctnessRules[typeof(T)](factory);

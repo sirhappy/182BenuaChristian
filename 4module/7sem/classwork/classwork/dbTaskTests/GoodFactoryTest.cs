@@ -9,8 +9,7 @@ namespace dbTaskTests
         string name = "name";
         string desc = "desc";
         string category = "category";
-        long shopId = 0;
-        
+
         [Test]
         public void CheckGoodGeneration()
         {
@@ -31,7 +30,7 @@ namespace dbTaskTests
 
             var instance1 = factory.Instance;
             var instance2 = factory.Instance;
-            
+
             Assert.AreNotSame(instance1, instance2);
             Assert.AreNotEqual(instance1.Id, instance2.Id);
             Assert.AreEqual(instance2.Id, instance1.Id + 1);

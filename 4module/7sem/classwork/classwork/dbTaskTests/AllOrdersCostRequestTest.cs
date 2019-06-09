@@ -41,7 +41,7 @@ namespace dbTaskTests
             Clear();
             double rightCost = DummyFill();
             double result = 0;
-            Assert.DoesNotThrow(() => { result = _assembly.RequestsFactory.AllOrdersSum(_assembly.MyDataBase); });
+            Assert.DoesNotThrow(() => { result = _assembly.RequestsFactory.GetAllOrdersSum(_assembly.MyDataBase); });
 
             Assert.AreEqual(rightCost, result, 1e-5);
         }

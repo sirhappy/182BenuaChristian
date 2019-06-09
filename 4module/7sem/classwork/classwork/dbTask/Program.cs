@@ -5,8 +5,19 @@ using System.Reflection;
 
 namespace dbTask
 {
+    /// <summary>
+    /// Reader.
+    /// </summary>
     public class Reader
     {
+        /// <summary>
+        /// Read the object from console.
+        /// </summary>
+        /// <returns>The read object.</returns>
+        /// <param name="In">Prompt before entering data.</param>
+        /// <param name="Out">Error propmt.</param>
+        /// <param name="valid">Validation func.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static T Read<T>(string In, string Out, Func<T, bool> valid)
         {
             Console.WriteLine(In);
@@ -84,34 +95,35 @@ namespace dbTask
 
         public static void TestRequests(CoreAssembly coreAssembly)
         {
-            Console.WriteLine(coreAssembly.RequestsFactory.MostExpensiveGoodCategory(coreAssembly.MyDataBase));
+            Console.WriteLine(coreAssembly.RequestsFactory.GetMostExpensiveGoodCategory(coreAssembly.MyDataBase));
             Console.WriteLine();
-            foreach (var el in coreAssembly.RequestsFactory.OrdersByCustomerWithLongestName(coreAssembly.MyDataBase))
+            foreach (var el in coreAssembly.RequestsFactory.GetOrdersByCustomerWithLongestName(coreAssembly.MyDataBase))
             {
                 Console.WriteLine(el);
             }
 
             Console.WriteLine();
-            Console.WriteLine(coreAssembly.RequestsFactory.LeastSellsCity(coreAssembly.MyDataBase));
+            Console.WriteLine(coreAssembly.RequestsFactory.GetLeastSellsCity(coreAssembly.MyDataBase));
             Console.WriteLine();
-            foreach (var lastName in coreAssembly.RequestsFactory.CustomersLastNameWhoBoughtMostPopularGood(coreAssembly
-                .MyDataBase))
+            foreach (var lastName in coreAssembly.RequestsFactory.GetCustomersLastNameWhoBoughtMostPopularGood(
+                coreAssembly
+                    .MyDataBase))
             {
                 Console.WriteLine(lastName);
             }
 
             Console.WriteLine();
             Console.WriteLine(
-                coreAssembly.RequestsFactory.ShopsAmountInCountryWithLeastAmountOfShops(coreAssembly.MyDataBase));
+                coreAssembly.RequestsFactory.GetShopsAmountInCountryWithLeastAmountOfShops(coreAssembly.MyDataBase));
 
             Console.WriteLine();
-            foreach (var order in coreAssembly.RequestsFactory.OrdersInForeignCity(coreAssembly.MyDataBase))
+            foreach (var order in coreAssembly.RequestsFactory.GetOrdersInForeignCity(coreAssembly.MyDataBase))
             {
                 Console.WriteLine(order);
             }
 
             Console.WriteLine();
-            Console.WriteLine(coreAssembly.RequestsFactory.AllOrdersSum(coreAssembly.MyDataBase));
+            Console.WriteLine(coreAssembly.RequestsFactory.GetAllOrdersSum(coreAssembly.MyDataBase));
         }
 
         public static void Main(string[] args)
