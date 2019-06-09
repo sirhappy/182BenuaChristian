@@ -6,9 +6,24 @@ using System.Linq;
 namespace dbTask
 {
     /// <summary>
+    /// Factory correctness checker
+    /// </summary>
+    public interface IFactoryCorrectnessChecker
+    {
+        /// <summary>
+        /// Validates the factory
+        /// </summary>
+        /// <param name="factory">Factory</param>
+        /// <typeparam name="T">Factory type to be validated</typeparam>
+        /// <typeparam name="U">Factory produce type to be validated</typeparam>
+        /// <returns></returns>
+        bool IsValid<T, U>(T factory) where T : IEntityFactory<U> where U : IEntity;
+    }
+
+    /// <summary>
     /// Factory correctness checker.
     /// </summary>
-    public class FactoryCorrectnessChecker
+    public class FactoryCorrectnessChecker : IFactoryCorrectnessChecker
     {
         /// <summary>
         /// The correctness rules.
@@ -18,7 +33,7 @@ namespace dbTask
         /// <summary>
         /// The data base.
         /// </summary>
-        private DataBase _dataBase;
+        private IDataBase _dataBase;
 
         /// <summary>
         /// The length of the common max.
@@ -34,7 +49,7 @@ namespace dbTask
         /// Initializes a new instance of the <see cref="T:dbTask.FactoryCorrectnessChecker"/> class.
         /// </summary>
         /// <param name="dataBase">Data base.</param>
-        public FactoryCorrectnessChecker(DataBase dataBase)
+        public FactoryCorrectnessChecker(IDataBase dataBase)
         {
             _dataBase = dataBase;
             _correctnessRules = new Dictionary<Type, Func<object, bool>>();

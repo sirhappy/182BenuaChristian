@@ -15,7 +15,7 @@ namespace dbTask
         /// Gets my data base.
         /// </summary>
         /// <value>My data base.</value>
-        public DataBase MyDataBase { get; }
+        public IDataBase MyDataBase { get; }
 
         /// <summary>
         /// Gets the requests factory.
@@ -27,7 +27,7 @@ namespace dbTask
         /// Gets the correctness checker.
         /// </summary>
         /// <value>The correctness checker.</value>
-        public FactoryCorrectnessChecker CorrectnessChecker { get; }
+        public IFactoryCorrectnessChecker CorrectnessChecker { get; }
 
         /// <summary>
         /// Gets the data base content checker.

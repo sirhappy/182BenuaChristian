@@ -15,7 +15,7 @@ namespace dbTask
         /// </summary>
         /// <returns>The orders by customer with longest name.</returns>
         /// <param name="dataBase">Data base.</param>
-        IEnumerable<Good> GetOrdersByCustomerWithLongestName(DataBase dataBase);
+        IEnumerable<Good> GetOrdersByCustomerWithLongestName(IDataBase dataBase);
 
 
         /// <summary>
@@ -23,42 +23,42 @@ namespace dbTask
         /// </summary>
         /// <returns>The most expensive good category.</returns>
         /// <param name="dataBase">Data base.</param>
-        string GetMostExpensiveGoodCategory(DataBase dataBase);
+        string GetMostExpensiveGoodCategory(IDataBase dataBase);
 
         /// <summary>
         /// Gets the least sells city.
         /// </summary>
         /// <returns>The least sells city.</returns>
         /// <param name="dataBase">Data base.</param>
-        string GetLeastSellsCity(DataBase dataBase);
+        string GetLeastSellsCity(IDataBase dataBase);
 
         /// <summary>
         /// Gets the customers last name who bought most popular good.
         /// </summary>
         /// <returns>The customers last name who bought most popular good.</returns>
         /// <param name="dataBase">Data base.</param>
-        IEnumerable<string> GetCustomersLastNameWhoBoughtMostPopularGood(DataBase dataBase);
+        IEnumerable<string> GetCustomersLastNameWhoBoughtMostPopularGood(IDataBase dataBase);
 
         /// <summary>
         /// Gets the shops amount in country with least amount of shops.
         /// </summary>
         /// <returns>The shops amount in country with least amount of shops.</returns>
         /// <param name="dataBase">Data base.</param>
-        int GetShopsAmountInCountryWithLeastAmountOfShops(DataBase dataBase);
+        int GetShopsAmountInCountryWithLeastAmountOfShops(IDataBase dataBase);
 
         /// <summary>
         /// Gets the orders in foreign city.
         /// </summary>
         /// <returns>The orders in foreign city.</returns>
         /// <param name="dataBase">Data base.</param>
-        IEnumerable<Order> GetOrdersInForeignCity(DataBase dataBase);
+        IEnumerable<Order> GetOrdersInForeignCity(IDataBase dataBase);
 
         /// <summary>
         /// Gets all orders sum.
         /// </summary>
         /// <returns>The all orders sum.</returns>
         /// <param name="dataBase">Data base.</param>
-        double GetAllOrdersSum(DataBase dataBase);
+        double GetAllOrdersSum(IDataBase dataBase);
     }
 
     /// <summary>
@@ -72,7 +72,7 @@ namespace dbTask
         /// </summary>
         /// <returns>The orders by customer with longest name.</returns>
         /// <param name="dataBase">Data base.</param>
-        public IEnumerable<Good> GetOrdersByCustomerWithLongestName(DataBase dataBase)
+        public IEnumerable<Good> GetOrdersByCustomerWithLongestName(IDataBase dataBase)
         {
             int maxNameLen = dataBase.Table<Customer>().Select(el => el.Name.Length).Max();
             var customer = dataBase.Table<Customer>().First(el => el.Name.Length == maxNameLen);
@@ -89,7 +89,7 @@ namespace dbTask
         /// </summary>
         /// <returns>The most expensive good category.</returns>
         /// <param name="dataBase">Data base.</param>
-        public string GetMostExpensiveGoodCategory(DataBase dataBase)
+        public string GetMostExpensiveGoodCategory(IDataBase dataBase)
         {
             double maxCost = dataBase.Table<Order>().Select(el => el.GoodCost).Max();
             var order = dataBase.Table<Order>().ToList().First(el => Math.Abs(el.GoodCost - maxCost) < 1e-9);
@@ -108,7 +108,7 @@ namespace dbTask
         /// </summary>
         /// <returns>The least sells city.</returns>
         /// <param name="dataBase">Data base.</param>
-        public string GetLeastSellsCity(DataBase dataBase)
+        public string GetLeastSellsCity(IDataBase dataBase)
         {
             var city = dataBase.Table<Order>().Select(el =>
                 {
@@ -141,7 +141,7 @@ namespace dbTask
         /// </summary>
         /// <returns>The customers last name who bought most popular good.</returns>
         /// <param name="dataBase">Data base.</param>
-        public IEnumerable<string> GetCustomersLastNameWhoBoughtMostPopularGood(DataBase dataBase)
+        public IEnumerable<string> GetCustomersLastNameWhoBoughtMostPopularGood(IDataBase dataBase)
         {
             var foundedOrder = dataBase.Table<Order>().GroupBy(el => el.GoodId).Select(el => new
             {
@@ -166,7 +166,7 @@ namespace dbTask
         /// </summary>
         /// <returns>The shops amount in country with least amount of shops.</returns>
         /// <param name="dataBase">Data base.</param>
-        public int GetShopsAmountInCountryWithLeastAmountOfShops(DataBase dataBase)
+        public int GetShopsAmountInCountryWithLeastAmountOfShops(IDataBase dataBase)
         {
             var countryShop = dataBase.Table<Shop>().GroupBy(shop => shop.Country).Select(groupByCountry =>
                     new {Country = groupByCountry.Key, ShopsCnt = groupByCountry.Count()})
@@ -179,7 +179,7 @@ namespace dbTask
         /// </summary>
         /// <returns>The orders in foreign city.</returns>
         /// <param name="dataBase">Data base.</param>
-        public IEnumerable<Order> GetOrdersInForeignCity(DataBase dataBase)
+        public IEnumerable<Order> GetOrdersInForeignCity(IDataBase dataBase)
         {
             return dataBase.Table<Order>().Where(order =>
             {
@@ -210,7 +210,7 @@ namespace dbTask
         /// </summary>
         /// <returns>The all orders sum.</returns>
         /// <param name="dataBase">Data base.</param>
-        public double GetAllOrdersSum(DataBase dataBase)
+        public double GetAllOrdersSum(IDataBase dataBase)
         {
             return dataBase.Table<Order>().Select(order => order.GoodCost * order.GoodAmount).Sum();
         }

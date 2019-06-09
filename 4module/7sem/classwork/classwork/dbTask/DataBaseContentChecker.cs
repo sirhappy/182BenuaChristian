@@ -7,7 +7,7 @@ namespace dbTask
     /// </summary>
     public interface IDataBaseContentChecker
     {
-        bool IsValid(DataBase dataBase);
+        bool IsValid(IDataBase dataBase);
     }
 
     /// <summary>
@@ -20,7 +20,7 @@ namespace dbTask
         /// </summary>
         /// <returns><c>true</c>, if db was valid, <c>false</c> otherwise.</returns>
         /// <param name="dataBase">Data base.</param>
-        public bool IsValid(DataBase dataBase)
+        public bool IsValid(IDataBase dataBase)
         {
             return CheckOrders(dataBase);
         }
@@ -30,7 +30,7 @@ namespace dbTask
         /// </summary>
         /// <returns><c>true</c>, if database has right content, <c>false</c> otherwise.</returns>
         /// <param name="dataBase">Data base.</param>
-        private bool CheckOrders(DataBase dataBase)
+        private bool CheckOrders(IDataBase dataBase)
         {
             bool ok = true;
             foreach (var order in dataBase.Table<Order>())

@@ -5,7 +5,71 @@ using System.Linq;
 
 namespace dbTask
 {
-    public class DataBase : ICloneable
+    /// <summary>
+    /// Data base access interface.
+    /// </summary>
+    public interface IDataBase : ICloneable
+    {
+        /// <summary>
+        /// Creates the table.
+        /// </summary>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        void CreateTable<T>() where T : IEntity;
+
+        /// <summary>
+        /// Creates the table no throw.
+        /// </summary>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        void CreateTableNoThrow<T>() where T : IEntity;
+
+        /// <summary>
+        /// Inserts new entity into database table.
+        /// </summary>
+        /// <param name="factory">Factory.</param>
+        /// <typeparam name="T">Database table where new entity should be insertde</typeparam>
+        void InsertInto<T>(IEntityFactory<T> factory) where T : IEntity;
+
+        /// <summary>
+        /// Gets Database Table.
+        /// </summary>
+        /// <returns>The table.</returns>
+        /// <typeparam name="T">The Table to be returned</typeparam>
+        IEnumerable<T> Table<T>() where T : IEntity;
+
+        /// <summary>
+        /// Restores the data table.
+        /// </summary>
+        /// <param name="prefix">Prefix.</param>
+        /// <param name="fileName">File name.</param>
+        /// <typeparam name="T">Type of table to be restored.</typeparam>
+        void RestoreDataTable<T>(string prefix = "", string fileName = null) where T : IEntity;
+
+        /// <summary>
+        /// Serialize the specified prefix and fileName.
+        /// </summary>
+        /// <param name="prefix">Prefix.</param>
+        /// <param name="fileName">File name.</param>
+        /// <typeparam name="T">Type of table to be serialized.</typeparam>
+        void Serialize<T>(string prefix = "", string fileName = null) where T : IEntity;
+
+        /// <summary>
+        /// Rolls back the database state.
+        /// </summary>
+        /// <param name="checkPoint">Check point.</param>
+        void RollBack(DataBase checkPoint);
+
+        /// <summary>
+        /// Clears all database tables.
+        /// </summary>
+        void ClearAll();
+
+        /// <summary>
+        /// Creates all database tables.
+        /// </summary>
+        void CreateAll();
+    }
+
+    public class DataBase : IDataBase
     {
         /// <summary>
         /// The database tables.

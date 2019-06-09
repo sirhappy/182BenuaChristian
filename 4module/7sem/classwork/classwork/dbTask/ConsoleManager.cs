@@ -101,12 +101,12 @@ namespace dbTask
         /// <summary>
         /// The factory correctness checker.
         /// </summary>
-        private FactoryCorrectnessChecker _checker;
+        private IFactoryCorrectnessChecker _checker;
 
         /// <summary>
         /// The data base.
         /// </summary>
-        private readonly DataBase _dataBase;
+        private readonly IDataBase _dataBase;
 
         /// <summary>
         /// The requests factory.
@@ -140,7 +140,7 @@ namespace dbTask
         /// <param name="dataBase">Data base.</param>
         /// <param name="requestsFactory">Requests factory.</param>
         /// <param name="dataBaseContentChecker">Data base content checker.</param>
-        public ConsoleManager(FactoryCorrectnessChecker checker, DataBase dataBase, IRequestsFactory requestsFactory,
+        public ConsoleManager(IFactoryCorrectnessChecker checker, IDataBase dataBase, IRequestsFactory requestsFactory,
             IDataBaseContentChecker dataBaseContentChecker)
         {
             _checker = checker;
